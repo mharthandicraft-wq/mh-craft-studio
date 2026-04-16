@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Import Fontsource Fonts */
+@import "@fontsource-variable/inter";
+@import "@fontsource/amarante/400.css";
+@import "@fontsource/vazirmatn";
+
+@theme {
+  /* Define custom font families */
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amarante", serif;
+  --font-farsi: "Vazirmatn", sans-serif;
+
+  /* Custom Colors for the brand */
+  --color-brand-gold: #c5a059;
+  --color-brand-dark: #081226;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-brand-dark);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  /* Typography for different languages */
+  [lang="fa"] {
+    font-family: var(--font-farsi);
+    direction: rtl;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: 0.02em;
+    font-weight: 400; 
+  }
+
+  /* Specific heading override for Persian to keep it clean */
+  [lang="fa"] h1, 
+  [lang="fa"] h2, 
+  [lang="fa"] h3 {
+    font-family: var(--font-farsi);
+    font-weight: 700;
+  }
+
+  /* Custom selection color to match branding */
+  ::selection {
+    background-color: var(--color-brand-gold);
+    color: var(--color-brand-dark);
+  }
+}

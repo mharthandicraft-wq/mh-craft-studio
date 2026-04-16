@@ -1,0 +1,17 @@
+---
+// src/pages/en/index.astro
+import MainLayout from '../../layouts/MainLayout.astro';
+import HeroScroll from '../../components/react/HeroScroll.tsx';
+import Pillars from '../../components/Pillars.astro';
+---
+
+<MainLayout title="Home" lang="en">
+  
+  <HeroScroll client:load />
+  <Pillars />
+
+  <section class="h-screen bg-neutral-900 flex items-center justify-center">
+    <h2 class="text-3xl font-serif text-brand-gold">Next Section (Our Mission)</h2>
+  </section>
+
+</MainLayout>

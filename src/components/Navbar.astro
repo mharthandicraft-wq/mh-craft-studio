@@ -1,0 +1,75 @@
+---
+// Navbar.astro - Secondary Navigation Bar
+---
+
+<nav class="sticky top-0 z-50 bg-brand-dark flex justify-between items-center  pt-0 pb-4 px-16">
+  <!-- Start-side Navigation Links -->
+  <ul class="flex gap-x-8">
+    <li>
+      <a 
+        href="#home" 
+        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a 
+        href="#mission" 
+        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+      >
+        Our Mission
+      </a>
+    </li>
+    <li>
+      <a 
+        href="#story" 
+        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+      >
+        Our Story
+      </a>
+    </li>
+    <li>
+      <a 
+        href="#milestones" 
+        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+      >
+        Milestones
+      </a>
+    </li>
+    <li>
+      <a 
+        href="#transparency" 
+        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+      >
+        Transparency
+      </a>
+    </li>
+  </ul>
+
+  <!-- End-side Controls -->
+  <div class="flex gap-x-6 items-center">
+    <!-- Theme Toggle Button -->
+    <button 
+      aria-label="Toggle theme"
+      class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out px-3 py-1.5 border border-neutral-600 hover:border-brand-gold rounded"
+    >
+      🌙
+    </button>
+
+    <!-- Language Switcher -->
+    <div class="relative">
+      <label for="language-select" class="sr-only">Select language</label>
+      <select
+        id="language-select"
+        class="font-sans text-sm uppercase tracking-widest text-neutral-400 bg-transparent border border-neutral-600 rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
+        onchange="if (this.value) window.location.href=this.value"
+      >
+        <option value="/en" selected>EN</option>
+        <option value="/tr">TR</option>
+        <option value="/fa">FA</option>
+      </select>
+      <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-neutral-400">▾</span>
+    </div>
+  </div>
+</nav>
