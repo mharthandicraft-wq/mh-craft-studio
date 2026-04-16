@@ -14,27 +14,27 @@ const PortfolioHover = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-brand-dark w-full py-24 md:py-32 px-6 md:px-12 flex flex-col justify-center overflow-hidden">
+    <section className="bg-theme-base w-full py-10 md:py-32 md:py-32 px-6 md:px-12 flex flex-col justify-center overflow-hidden transition-colors duration-500">
       
       {/* Mobile Version: Vertical Stack */}
       <div className="md:hidden flex flex-col gap-12">
         <div className="mb-8 text-center px-4">
           <span className="text-brand-gold font-sans text-xs uppercase tracking-[0.2em] mb-4 block font-semibold">Portfolio Preview</span>
-          <h2 className="font-serif text-4xl text-white mb-4 leading-tight">Our Work</h2>
-          <p className="font-sans text-neutral-400 text-sm leading-relaxed">
+          <h2 className="font-serif text-4xl text-theme mb-4 leading-tight">Our Work</h2>
+          <p className="font-sans text-theme-muted text-sm leading-relaxed">
             A selection of handcrafted pieces created during different stages of our journey.
           </p>
         </div>
         {works.map((work) => (
-          <div key={work.id} className="flex flex-col gap-4 border border-white/5 bg-white/[0.01] rounded-lg p-5">
+          <div key={work.id} className="flex flex-col gap-4 border theme-card rounded-lg p-5">
             <img src={work.img} alt={work.title} className="w-full h-auto aspect-square object-cover object-center rounded-lg" />
             <div className="text-center pt-2">
-              <h3 className="font-serif text-2xl text-white mb-1 leading-tight">{work.title}</h3>
+              <h3 className="font-serif text-2xl text-theme mb-1 leading-tight">{work.title}</h3>
               <span className="font-sans text-brand-gold text-xs uppercase tracking-widest font-semibold">{work.cat}</span>
             </div>
           </div>
         ))}
-        <a href="/portfolio" className="mt-8 border border-brand-gold text-brand-gold px-8 py-5 uppercase tracking-[0.2em] text-sm hover:bg-brand-gold hover:text-brand-dark transition-colors w-full text-center">
+        <a href="/portfolio" className="mt-8 border border-brand-gold text-brand-gold px-8 py-5 uppercase tracking-[0.2em] text-sm hover:bg-brand-gold hover:text-theme-contrast transition-colors w-full text-center">
           View Full Portfolio
         </a>
       </div>
@@ -45,8 +45,8 @@ const PortfolioHover = () => {
         {/* Centered Header */}
         <div className="text-center mb-12">
           <span className="text-brand-gold font-sans text-xs uppercase tracking-[0.2em] mb-4 block font-semibold">Portfolio Preview</span>
-          <h2 className="font-serif text-5xl lg:text-6xl text-white mb-6 leading-tight">Our Work</h2>
-          <p className="font-sans text-neutral-400 text-lg leading-relaxed">
+          <h2 className="font-serif text-5xl lg:text-6xl text-theme mb-6 leading-tight">Our Work</h2>
+          <p className="font-sans text-theme-muted text-lg leading-relaxed">
             A selection of handcrafted pieces created during different stages of our journey.
           </p>
         </div>
@@ -55,7 +55,7 @@ const PortfolioHover = () => {
         <div className="grid grid-cols-12 gap-20 items-center">
           
           {/* Left Column: Images */}
-          <div className="col-span-7 h-[70vh] relative rounded-lg overflow-hidden border-2 border-white/5 bg-white/[0.02] shadow-xl">
+          <div className="col-span-7 h-[70vh] relative rounded-lg overflow-hidden border-2 border-theme-soft bg-theme-surface-strong shadow-xl">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
@@ -73,14 +73,14 @@ const PortfolioHover = () => {
 
           {/* Right Column: Titles */}
           <div className="col-span-5 flex flex-col gap-12 lg:pl-10">
-            <div className="flex flex-col border-t border-white/10">
+            <div className="flex flex-col border-t border-theme">
               {works.map((work, index) => (
                 <div 
                   key={work.id}
                   onMouseEnter={() => setActiveIndex(index)}
-                  className="py-7 border-b border-white/10 cursor-pointer group flex justify-between items-center"
+                  className="py-7 border-b border-theme cursor-pointer group flex justify-between items-center"
                 >
-                  <h3 className={`font-serif text-3xl transition-colors duration-500 leading-tight ${activeIndex === index ? 'text-white' : 'text-white/40 group-hover:text-white/70'}`}>
+                  <h3 className={`font-serif text-3xl transition-colors duration-500 leading-tight ${activeIndex === index ? 'text-theme' : 'text-[var(--color-foreground-dim)] group-hover:text-[var(--color-foreground-faint)]'}`}>
                     {work.title}
                   </h3>
                   <span className={`font-sans text-sm font-semibold tracking-widest text-brand-gold transition-opacity duration-500 ${activeIndex === index ? 'opacity-100' : 'opacity-0'}`}>
@@ -90,7 +90,7 @@ const PortfolioHover = () => {
               ))}
             </div>
 
-            <a href="/portfolio" className="mt-8 self-start border-b-2 border-brand-gold text-brand-gold pb-2 uppercase tracking-[0.2em] text-sm hover:text-white transition-colors">
+            <a href="/portfolio" className="mt-8 self-start border-b-2 border-brand-gold text-brand-gold pb-2 uppercase tracking-[0.2em] text-sm hover:text-theme transition-colors">
               [ View Full Portfolio ]
             </a>
           </div>

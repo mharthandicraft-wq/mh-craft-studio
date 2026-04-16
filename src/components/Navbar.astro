@@ -1,37 +1,92 @@
 ---
 import ThemeToggle from './react/ThemeToggle';
+
+const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
 ---
 <!-- Navbar.astro - Secondary Navigation Bar -->
 
-<nav class="sticky top-0 z-50 bg-brand-light/60 dark:bg-brand-dark/60 backdrop-blur-sm flex justify-between items-center py-5 px-16 border-b border-black/[0.03] dark:border-white/[0.03] transition-colors duration-500">
-  <ul class="flex gap-x-8">
-    {['home', 'mission', 'story', 'milestones', 'transparency'].map((item) => (
-      <li>
-        <a 
-          href={`#${item}`} 
-          class="font-sans text-sm uppercase tracking-widest text-neutral-600 dark:text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+<nav class="sticky top-0 z-50 border-b border-theme-soft bg-theme-base-muted backdrop-blur-sm transition-colors duration-500">
+  <div class="hidden items-center justify-between px-16 py-5 lg:flex">
+    <ul class="flex gap-x-8">
+      {navItems.map((item) => (
+        <li>
+          <a 
+            href={`#${item}`} 
+            class="font-sans text-sm uppercase tracking-widest text-theme-muted hover:text-brand-gold transition-colors duration-300 ease-in-out"
+          >
+            {item.replace('-', ' ')}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="flex items-center gap-x-6">
+      <ThemeToggle client:load />
+
+      <div class="relative">
+        <label for="language-select" class="sr-only">Select language</label>
+        <select
+          id="language-select"
+          class="font-sans text-sm uppercase tracking-widest text-theme-muted bg-transparent border border-theme rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
+          onchange="if (this.value) window.location.href=this.value"
         >
-          {item.replace('-', ' ')}
-        </a>
-      </li>
-    ))}
-  </ul>
+          <option value="/en" selected>EN</option>
+          <option value="/tr">TR</option>
+          <option value="/fa">FA</option>
+        </select>
+        <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-theme-soft">▾</span>
+      </div>
+    </div>
+  </div>
 
-  <div class="flex gap-x-6 items-center">
-    <ThemeToggle client:load />
+  <div class="px-4 py-4 sm:px-6 lg:hidden">
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <ThemeToggle client:load />
 
-    <div class="relative">
-      <label for="language-select" class="sr-only">Select language</label>
-      <select
-        id="language-select"
-        class="font-sans text-sm uppercase tracking-widest text-neutral-600 dark:text-neutral-400 bg-transparent border border-neutral-300 dark:border-neutral-600 rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
-        onchange="if (this.value) window.location.href=this.value"
-      >
-        <option value="/en" selected>EN</option>
-        <option value="/tr">TR</option>
-        <option value="/fa">FA</option>
-      </select>
-      <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-neutral-400">▾</span>
+        <div class="relative">
+          <label for="language-select-mobile" class="sr-only">Select language</label>
+          <select
+            id="language-select-mobile"
+            class="font-sans text-sm uppercase tracking-widest text-theme-muted bg-transparent border border-theme rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
+            onchange="if (this.value) window.location.href=this.value"
+          >
+            <option value="/en" selected>EN</option>
+            <option value="/tr">TR</option>
+            <option value="/fa">FA</option>
+          </select>
+          <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-theme-soft">▾</span>
+        </div>
+      </div>
+
+      <details class="relative">
+        <summary
+          class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded border border-theme text-theme transition-colors duration-300 hover:border-brand-gold hover:text-brand-gold [&::-webkit-details-marker]:hidden"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="sr-only">Open navigation menu</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+        </summary>
+
+        <div class="absolute right-0 top-[calc(100%+0.75rem)] w-56 rounded-xl border border-theme-strong bg-theme-base px-4 py-4 text-theme shadow-[0_18px_50px_rgba(0,0,0,0.12)]">
+          <ul class="flex flex-col gap-3">
+            {navItems.map((item) => (
+              <li>
+                <a 
+                  href={`#${item}`} 
+                  class="block font-sans text-sm uppercase tracking-widest text-theme-muted hover:text-brand-gold transition-colors duration-300 ease-in-out"
+                >
+                  {item.replace('-', ' ')}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
     </div>
   </div>
 </nav>

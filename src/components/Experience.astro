@@ -2,13 +2,13 @@
 // src/components/Experience.astro
 ---
 
-<section class="w-full py-32 px-6 md:px-12 bg-brand-light dark:bg-brand-dark relative overflow-hidden flex items-center min-h-screen">
+<section class="w-full py-10 md:py-32 px-6 md:px-12 bg-theme-base relative overflow-hidden flex items-center min-h-screen transition-colors duration-500">
   
   <div class="absolute right-[-50%] md:right-[-10%] top-1/2 -translate-y-1/2 w-[600px] md:w-[600px] h-[600px] md:h-[600px] opacity-[0.1] pointer-events-none animate-[spin_120s_linear_infinite]">
-    <div class="absolute inset-0 border border-white rotate-0"></div>
-    <div class="absolute inset-0 border border-white rotate-45"></div>
-    <div class="absolute inset-12 border border-white rotate-[22.5deg]"></div>
-    <div class="absolute inset-12 border border-white -rotate-[22.5deg]"></div>
+    <div class="absolute inset-0 border border-theme rotate-0"></div>
+    <div class="absolute inset-0 border border-theme rotate-45"></div>
+    <div class="absolute inset-12 border border-theme rotate-[22.5deg]"></div>
+    <div class="absolute inset-12 border border-theme -rotate-[22.5deg]"></div>
     <div class="absolute inset-32 border-2 border-brand-gold rotate-45"></div>
     <div class="absolute inset-48 border border-brand-gold rotate-0"></div>
   </div>
@@ -19,16 +19,16 @@
       <span class="text-brand-gold font-sans text-xs uppercase tracking-[0.2em] mb-4 block font-semibold">
         Our Experience & Capabilities
       </span>
-      <h2 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
+      <h2 class="font-serif text-4xl md:text-5xl text-theme mb-6 leading-tight">
         What We Bring Into This Work
       </h2>
-      <p class="font-sans text-neutral-300 text-lg leading-relaxed mb-16">
+      <p class="font-sans text-theme-soft text-lg leading-relaxed mb-16">
         This project is built on years of lived practice and real-world experience:
       </p>
 
       <div class="pl-6 border-l-2 border-brand-gold/50 relative">
         <div class="absolute -left-[5px] top-0 w-2 h-2 bg-brand-gold rotate-45"></div>
-        <p class="font-serif text-2xl md:text-3xl text-white italic leading-snug">
+        <p class="font-serif text-2xl md:text-3xl text-theme italic leading-snug">
           "We do not present ourselves as a large institution—but as a small family continuing a craft with the tools we have learned over time."
         </p>
       </div>
@@ -36,44 +36,44 @@
 
     <div class="lg:col-span-7 flex flex-col gap-4 lg:pl-12">
       
-      <div class="flex items-start gap-6 group bg-white/[0.01] border border-white/5 p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 hover:bg-white/[0.02]">
+      <div class="flex items-start gap-6 group theme-card border p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 theme-card-hover">
         <div class="mt-1.5 w-2.5 h-2.5 bg-brand-gold rotate-45 shrink-0 group-hover:rotate-90 group-hover:scale-125 transition-all duration-500"></div>
-        <p class="font-sans text-neutral-300 text-base md:text-lg leading-relaxed">
+        <p class="font-sans text-theme-soft text-base md:text-lg leading-relaxed">
           Over a decade of life and service in Türkiye as a family
         </p>
       </div>
 
-      <div class="flex items-start gap-6 group bg-white/[0.01] border border-white/5 p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 hover:bg-white/[0.02]">
+      <div class="flex items-start gap-6 group theme-card border p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 theme-card-hover">
         <div class="mt-1.5 w-2.5 h-2.5 bg-brand-gold rotate-45 shrink-0 group-hover:rotate-90 group-hover:scale-125 transition-all duration-500"></div>
-        <p class="font-sans text-neutral-300 text-base md:text-lg leading-relaxed">
+        <p class="font-sans text-theme-soft text-base md:text-lg leading-relaxed">
           Long-term practice in traditional Khatam craftsmanship
         </p>
       </div>
 
-      <div class="flex items-start gap-6 group bg-white/[0.01] border border-white/5 p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 hover:bg-white/[0.02]">
+      <div class="flex items-start gap-6 group theme-card border p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 theme-card-hover">
         <div class="mt-1.5 w-2.5 h-2.5 bg-brand-gold rotate-45 shrink-0 group-hover:rotate-90 group-hover:scale-125 transition-all duration-500"></div>
-        <p class="font-sans text-neutral-300 text-base md:text-lg leading-relaxed">
+        <p class="font-sans text-theme-soft text-base md:text-lg leading-relaxed">
           Experience in documenting our craft process through video content
         </p>
       </div>
 
-      <div class="flex items-start gap-6 group bg-white/[0.01] border border-white/5 p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 hover:bg-white/[0.02]">
+      <div class="flex items-start gap-6 group theme-card border p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 theme-card-hover">
         <div class="mt-1.5 w-2.5 h-2.5 bg-brand-gold rotate-45 shrink-0 group-hover:rotate-90 group-hover:scale-125 transition-all duration-500"></div>
-        <p class="font-sans text-neutral-300 text-base md:text-lg leading-relaxed">
+        <p class="font-sans text-theme-soft text-base md:text-lg leading-relaxed">
           A previously active online presence where we shared our work journey
         </p>
       </div>
 
-      <div class="flex items-start gap-6 group bg-white/[0.01] border border-white/5 p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 hover:bg-white/[0.02]">
+      <div class="flex items-start gap-6 group theme-card border p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 theme-card-hover">
         <div class="mt-1.5 w-2.5 h-2.5 bg-brand-gold rotate-45 shrink-0 group-hover:rotate-90 group-hover:scale-125 transition-all duration-500"></div>
-        <p class="font-sans text-neutral-300 text-base md:text-lg leading-relaxed">
+        <p class="font-sans text-theme-soft text-base md:text-lg leading-relaxed">
           Practical understanding of digital tools such as website creation and UX/UI design
         </p>
       </div>
 
-      <div class="flex items-start gap-6 group bg-white/[0.01] border border-white/5 p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 hover:bg-white/[0.02]">
+      <div class="flex items-start gap-6 group theme-card border p-6 rounded-lg hover:border-brand-gold/30 transition-all duration-500 theme-card-hover">
         <div class="mt-1.5 w-2.5 h-2.5 bg-brand-gold rotate-45 shrink-0 group-hover:rotate-90 group-hover:scale-125 transition-all duration-500"></div>
-        <p class="font-sans text-neutral-300 text-base md:text-lg leading-relaxed">
+        <p class="font-sans text-theme-soft text-base md:text-lg leading-relaxed">
           Familiarity with online platforms and content-based outreach
         </p>
       </div>

@@ -9,17 +9,17 @@ export default {
       colors: {
         brand: {
           // Dark Mode Palette
-          dark: '#0a0a0a',   
+          dark: '#081226',
           'dark-gray': '#1a1a1a',
-          'dark-gold': '#c5a059', 
+          'dark-gold': '#c5a059',
 
           // Light Mode Palette
-          light: '#fdfcfb',  
-          gray: '#f4f1ee',   
+          light: '#fdfcfb',
+          gray: '#f4f1ee',
           
           // Refined Colors
-          gold: '#b48a3d',   
-          accent: '#1a1a1a', 
+          gold: '#c5a059',
+          accent: '#242424',
           white: '#ffffff',
         },
       },
