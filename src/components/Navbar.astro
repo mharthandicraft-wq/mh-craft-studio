@@ -1,68 +1,30 @@
 ---
-// Navbar.astro - Secondary Navigation Bar
+import ThemeToggle from './react/ThemeToggle';
 ---
+<!-- Navbar.astro - Secondary Navigation Bar -->
 
-<nav class="sticky top-0 z-50 bg-brand-dark/60 backdrop-blur-sm flex justify-between items-center py-5 px-16">
-  <!-- Start-side Navigation Links -->
+<nav class="sticky top-0 z-50 bg-brand-light/60 dark:bg-brand-dark/60 backdrop-blur-sm flex justify-between items-center py-5 px-16 border-b border-black/[0.03] dark:border-white/[0.03] transition-colors duration-500">
   <ul class="flex gap-x-8">
-    <li>
-      <a 
-        href="#home" 
-        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a 
-        href="#mission" 
-        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
-      >
-        Our Mission
-      </a>
-    </li>
-    <li>
-      <a 
-        href="#story" 
-        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
-      >
-        Our Story
-      </a>
-    </li>
-    <li>
-      <a 
-        href="#milestones" 
-        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
-      >
-        Milestones
-      </a>
-    </li>
-    <li>
-      <a 
-        href="#transparency" 
-        class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
-      >
-        Transparency
-      </a>
-    </li>
+    {['home', 'mission', 'story', 'milestones', 'transparency'].map((item) => (
+      <li>
+        <a 
+          href={`#${item}`} 
+          class="font-sans text-sm uppercase tracking-widest text-neutral-600 dark:text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out"
+        >
+          {item.replace('-', ' ')}
+        </a>
+      </li>
+    ))}
   </ul>
 
-  <!-- End-side Controls -->
   <div class="flex gap-x-6 items-center">
-    <!-- Theme Toggle Button -->
-    <button 
-      aria-label="Toggle theme"
-      class="font-sans text-sm uppercase tracking-widest text-neutral-400 hover:text-brand-gold transition-colors duration-300 ease-in-out px-3 py-1.5 border border-neutral-600 hover:border-brand-gold rounded"
-    >
-      🌙
-    </button>
+    <ThemeToggle client:load />
 
-    <!-- Language Switcher -->
     <div class="relative">
       <label for="language-select" class="sr-only">Select language</label>
       <select
         id="language-select"
-        class="font-sans text-sm uppercase tracking-widest text-neutral-400 bg-transparent border border-neutral-600 rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
+        class="font-sans text-sm uppercase tracking-widest text-neutral-600 dark:text-neutral-400 bg-transparent border border-neutral-300 dark:border-neutral-600 rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
         onchange="if (this.value) window.location.href=this.value"
       >
         <option value="/en" selected>EN</option>
