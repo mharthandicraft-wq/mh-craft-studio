@@ -20,7 +20,7 @@ const AnimatedHeader = () => {
     <h1 className="font-serif text-left tracking-tight flex items-center overflow-hidden">
       
       {/* "MH" - Bold, Solid Background to cover the sliding text */}
-      <span className="font-bold text-white text-[14vw] md:text-[160px] z-10 relative bg-brand-dark pr-3">
+      <span className="font-bold text-theme text-[10vw] sm:text-[14vw] md:text-[160px] z-10 relative bg-theme-header-block pr-1.5 sm:pr-3 transition-colors duration-500">
         MH
       </span>
 
@@ -32,7 +32,7 @@ const AnimatedHeader = () => {
           variants={craftStudioVariants}
           initial="hidden"
           animate="visible"
-          className="font-normal text-neutral-300 whitespace-nowrap inline-block text-[14vw] md:text-[160px] pl-2"
+          className="font-normal text-theme-soft whitespace-nowrap inline-block text-[10vw] sm:text-[14vw] md:text-[160px] pl-1 sm:pl-2 transition-colors duration-500"
         >
           craft studio
         </motion.span>
