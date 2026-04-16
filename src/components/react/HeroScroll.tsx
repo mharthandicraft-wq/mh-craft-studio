@@ -2,52 +2,46 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const HeroScroll = () => {
-  // رفرنسی برای کنترل کل مسیر اسکرول
   const targetRef = useRef<HTMLDivElement>(null);
 
-  // محاسبه میزان پیشرفت اسکرول (از 0 تا 1)
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end end"]
   });
 
-  // انیمیشن عکس: از 100% عرض صفحه شروع میشه و در 30% اول اسکرول به 60% میرسه
   const imageWidth = useTransform(scrollYProgress, [0, 0.3], ["100%", "60%"]);
   
-  // انیمیشن متن اول (H1 و ساب‌تایتل): ظاهر شدن از 30 تا 40 درصد، پنهان شدن در 50 تا 60 درصد
-  const text1Opacity = useTransform(scrollYProgress, [0.3, 0.4, 0.5, 0.6], [0, 1, 1, 0]);
-  const text1Y = useTransform(scrollYProgress, [0.3, 0.4, 0.5, 0.6], [50, 0, 0, -50]);
+  // Text 1: Appears early, and starts fading out at 0.35
+  const text1Opacity = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.5], [0, 1, 1, 0]);
+  const text1Y = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.5], [30, 0, 0, -30]);
 
-  // انیمیشن متن دوم (داستان خانواده): ظاهر شدن از 60 تا 70 درصد اسکرول
-  const text2Opacity = useTransform(scrollYProgress, [0.6, 0.7, 1], [0, 1, 1]);
-  const text2Y = useTransform(scrollYProgress, [0.6, 0.7], [50, 0]);
+  // Text 2: Starts appearing at 0.4 (Right as Text 1 is almost gone)
+  // It reaches full opacity quickly and stays until the end
+  const text2Opacity = useTransform(scrollYProgress, [0.4, 0.55, 0.9], [0, 1, 1]);
+  const text2Y = useTransform(scrollYProgress, [0.4, 0.55], [30, 0]);
 
   return (
-    /* ارتفاع این کانتینر 3 برابر مانیتور است تا فضای کافی برای اسکرول داشته باشیم */
     <section ref={targetRef} className="h-[300vh] relative w-full bg-brand-dark">
       
-      {/* بخش چسبنده که در حین اسکرول ثابت می‌ماند */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center">
         
-        {/* ستون عکس */}
+        {/* Image Column */}
         <motion.div 
           style={{ width: imageWidth }} 
           className="h-full relative shrink-0"
         >
-          {/* توجه: نام فایل عکس را اگر چیز دیگری گذاشتید اینجا تغییر دهید */}
           <img 
             src="/images/home/artisan-marquetry-jewelry-box.webp" 
             alt="Handcrafted Marquetry Art" 
             className="w-full h-full object-cover"
           />
-          {/* یک سایه ملایم روی عکس تا اگر متن روی آن آمد خوانا بماند */}
           <div className="absolute inset-0 bg-brand-dark/20" />
         </motion.div>
 
-        {/* ستون متن‌ها (در فضای خالی باقیمانده قرار می‌گیرد) */}
+        {/* Content Column */}
         <div className="flex-1 h-full relative flex items-center">
           
-          {/* کانتینر متن اول */}
+          {/* First Message Container */}
           <motion.div 
             style={{ opacity: text1Opacity, y: text1Y }}
             className="absolute inset-0 flex flex-col justify-center px-6 md:px-16"
@@ -60,7 +54,7 @@ const HeroScroll = () => {
             </p>
           </motion.div>
 
-          {/* کانتینر متن دوم */}
+          {/* Second Message Container */}
           <motion.div 
             style={{ opacity: text2Opacity, y: text2Y }}
             className="absolute inset-0 flex flex-col justify-center px-6 md:px-16"
