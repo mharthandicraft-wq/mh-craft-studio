@@ -34,7 +34,7 @@ const { lang, content, projects } = Astro.props;
 </div>
 
 <div id="story">
-  <Experience content={content.experience} />
+  <Experience lang={lang} content={content.experience} />
   <PortfolioHover client:visible lang={lang} content={content.portfolioPreview} projects={projects} />
   <StatusAndChallenges client:visible content={content.statusAndChallenges} />
   <WhyContinue content={content.whyContinue} />

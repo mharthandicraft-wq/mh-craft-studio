@@ -5,6 +5,7 @@ import {
   buildLanguageSwitchPath,
   getTranslations,
   localizeHashLink,
+  localizePath,
   normalizeLang,
   type Lang,
 } from '../lib/i18n';
@@ -21,7 +22,7 @@ const t = getTranslations(activeLang);
 const navItems = [
   { key: 'home', href: localizeHashLink(activeLang, 'home'), label: t.nav.home },
   { key: 'mission', href: localizeHashLink(activeLang, 'mission'), label: t.nav.mission },
-  { key: 'story', href: localizeHashLink(activeLang, 'story'), label: t.nav.story },
+  { key: 'story', href: localizePath(activeLang, '/story'), label: t.nav.story },
   { key: 'milestones', href: localizeHashLink(activeLang, 'milestones'), label: t.nav.milestones },
   { key: 'transparency', href: localizeHashLink(activeLang, 'transparency'), label: t.nav.transparency },
 ];

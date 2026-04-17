@@ -1,0 +1,51 @@
+{
+  "locale": "en",
+  "pageId": "story",
+  "meta": {
+    "title": "Our Story",
+    "description": "The journey of MH Craft Studio — a family who carried the art of Khatam across borders, rebuilt from a small room, and refuses to stop believing."
+  },
+  "hero": {
+    "eyebrow": "Our Story",
+    "title": "Between Two Worlds,",
+    "highlight": "One Living Craft"
+  },
+  "sections": [
+    {
+      "title": "We Came to Rebuild",
+      "paragraphs": [
+        "We are a family of five — my spouse and I, our two sons (ages 9 and 10), and our 13-year-old daughter. For the past twelve years, we have been living in Türkiye as refugees. But if we define ourselves only by that word, we leave out an important part of the truth. We did not come here just to survive. We came to rebuild our lives.",
+        "Over the years, while trying to rebuild our own life, we have also served other refugees. As pastors, we have walked alongside families who have lost everything — their homes, their sense of safety, their hope. We have not only witnessed the pain of displacement; we have lived it ourselves.",
+        "And through this journey, something took shape within us — something that still moves us forward today: the belief that what we have learned should not remain only for ourselves. We have always tried, in whatever way we could, to lift others up — not just through support, but by helping create real pathways."
+      ],
+      "image": {
+        "src": "/images/story/mh-craft-studio-khatam-kari-artist-and-family5.webp",
+        "alt": "Family crafting together at a wooden workshop table, sharing the practice of Khatam marquetry"
+      }
+    },
+    {
+      "title": "The Craft & The Comeback",
+      "paragraphs": [
+        "Before coming to Türkiye, we ran a Khatam marquetry workshop in Iran. For us, Khatam is not just a decorative craft; it is part of a cultural heritage shaped by patience, precision, and care. I have spent many years working in this art, living and breathing it.",
+        "Four years ago, we decided to begin again. Not with funding or proper facilities — but with a small room in our home. That small room became our workshop. Limited tools, limited space — but the same passion. We started creating again, and at the same time, we began sharing our journey. We produced videos, published them, and gradually people began to watch. Our YouTube channel grew and eventually became monetized — a small but meaningful sign that even within limitations, a path can be built.",
+        "Alongside that, we launched our shop on Etsy. We did not make any sales, but we gained something valuable: experience. We learned how to think globally, how to present a product, and how to be seen in a digital marketplace. We were no longer only artisans. We were learning how to connect craftsmanship with the digital world."
+      ],
+      "image": {
+        "src": "/images/story/mh-craft-studio-khatam-kari-artist-and-family.webp",
+        "alt": "Close-up of intricate Khatam marquetry pieces laid out in geometric patterns on a workbench"
+      }
+    },
+    {
+      "title": "A Vision Worth Building",
+      "paragraphs": [
+        "Still, we could not continue. Not because we lacked ability — but because we lacked the necessary resources. We did not have a proper workspace, the right tools, or consistent access to materials. And most of our time had to go toward simply covering basic living costs. When life is reduced to survival, even the strongest dreams begin to fade. Production stopped. Our channel went quiet. And for a time, everything paused. But our belief never did.",
+        "Today, we find ourselves at the same starting point — but with more experience and a clearer vision. We want to build a real workshop — not just a place for production. A place where this art can live on. A place where people — especially those who have lost their opportunities — can learn a real skill. A place where someone can earn an income with their own hands, regain confidence, and rediscover their sense of worth.",
+        "We want to pass on what we have learned over the years — so that this path does not belong only to us. At the same time, we want to move our own family from survival to stability — a stability that allows us to continue and expand this work. This is not just a personal goal for us. We believe that every light lit in the darkness can help illuminate the way for others. We still have hope. Because this story is not finished yet."
+      ],
+      "image": {
+        "src": "/images/story/mh-craft-studio-khatam-kari-artist-and-son.webp",
+        "alt": "Hands carefully assembling Khatam pattern strips, symbolizing patience and the continuation of a living heritage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "locale": "tr",
+  "pageId": "story",
+  "meta": {
+    "title": "Hikayemiz",
+    "description": "MH Craft Studio'nun yolculuğu — hatem sanatını sınırları aşarak taşıyan, küçük bir odadan yeniden başlayan ve umudunu hiç yitirmeyen bir aile."
+  },
+  "hero": {
+    "eyebrow": "Hikayemiz",
+    "title": "İki Dünya Arasında,",
+    "highlight": "Yaşayan Bir Sanaat"
+  },
+  "sections": [
+    {
+      "title": "Yeniden İnşa Etmek İçin Geldik",
+      "paragraphs": [
+        "Biz beş kişilik bir aileyiz — eşim ve ben, 9 ve 10 yaşlarında iki oğlumuz ve 13 yaşında bir kızımız var. On iki yıldır Türkiye'de mülteci olarak yaşıyoruz. Ama kendimizi sadece bu kelimeyle tanımlarsak, gerçeğin önemli bir kısmını eksik bırakmış oluruz. Biz buraya sadece hayatta kalmak için gelmedik. Hayatımızı yeniden kurmak için geldik.",
+        "Bu yıllar boyunca, kendi hayatımızı yeniden inşa etmeye çalışırken, diğer mültecilerin de yanında olmaya gayret ettik. Her şeyini kaybetmiş insanlarla karşılaştık — evlerini, güvenlik duygularını, umutlarını. Göçün zorluklarını sadece görmedik; bizzat yaşadık.",
+        "Ve bu süreçte içimizde hâlâ bizi ileriye taşıyan bir şey oluştu: Öğrendiklerimizin sadece bize ait kalmaması gerektiğine dair bir inanç. Her zaman, elimizden geldiğince başkalarını da ayağa kaldırmaya çalıştık — sadece destek olarak değil, gerçek bir yol açarak."
+      ],
+      "image": {
+        "src": "/images/story/mh-craft-studio-khatam-kari-artist-and-family5.webp",
+        "alt": "Ahşap bir atölye masasında birlikte çalışan aile, hatem sanatının pratiklerini paylaşıyor"
+      }
+    },
+    {
+      "title": "Zanaat ve Yeniden Başlangıç",
+      "paragraphs": [
+        "Türkiye'ye gelmeden önce İran'da bir hatem sanatı atölyemiz vardı. Bizim için hatem sadece dekoratif bir el sanatı değil; sabır, hassasiyet ve özenle şekillenen bir kültürel mirastır. Bu alanda yıllarımı verdim; bu sanatı gerçekten yaşayarak öğrendim.",
+        "Dört yıl önce yeniden başlamaya karar verdik. Ne sermayemiz vardı ne de uygun bir alanımız — sadece evimizin küçük bir odası. O küçük oda bizim atölyemiz oldu. Sınırlı araçlar, sınırlı alan — ama aynı tutku. Yeniden üretmeye başladık ve aynı zamanda sürecimizi paylaşmaya başladık. Videolar çektik, yayınladık ve zamanla görünür olmaya başladık. YouTube kanalımız büyüdü ve gelir elde etmeye başladı — küçük ama anlamlı bir işaretti: sınırlı imkânlarla bile bir yol inşa edilebilirdi.",
+        "Bunun yanında Etsy'de bir mağaza açtık. Satış yapamadık, ama bizim için çok değerli bir deneyim kazandık. Global düşünmeyi, ürün sunmayı ve dijital bir pazarda görünür olmayı öğrendik. Artık sadece birer zanaatkâr değildik. Sanatı dijital dünya ile birleştirmeyi öğreniyorduk."
+      ],
+      "image": {
+        "src": "/images/story/mh-craft-studio-khatam-kari-artist-and-family.webp",
+        "alt": "Tezgâhta geometrik düzenlerle yerleştirilmiş karmaşık hatem kakma parçalarının yakın çekimi"
+      }
+    },
+    {
+      "title": "İnşa Etmeye Değer Bir Vizyon",
+      "paragraphs": [
+        "Ancak devam edemedik. Yetenek eksikliğinden değil, imkân eksikliğinden. Uygun bir atölyemiz yoktu, gerekli ekipmanlarımız yoktu ve malzemelere düzenli erişimimiz yoktu. Zamanımızın büyük kısmı temel yaşam giderlerini karşılamaya gidiyordu. Hayat sadece hayatta kalmaya odaklandığında, en güçlü hayaller bile zamanla solmaya başlar. Üretim durdu. Kanal sustu. Ve bir süreliğine her şey durakladı. Ama inancımız hiç durmadı.",
+        "Bugün aynı noktadayız — ama daha fazla deneyim ve daha net bir vizyonla. Gerçek bir atölye kurmak istiyoruz — sadece üretim yapılan bir yer değil. Bu sanatın yaşadığı bir yer. Fırsatlarını kaybetmiş insanların gerçek bir beceri öğrenebileceği bir yer. Bir insanın kendi emeğiyle gelir elde edebileceği, özgüven kazanabileceği ve yeniden değerli hissedebileceği bir yer.",
+        "Yıllar boyunca öğrendiklerimizi başkalarına aktarmak istiyoruz — bu yol sadece bize ait olmasın diye. Aynı zamanda kendi ailemizi de hayatta kalma mücadelesinden çıkarıp istikrarlı bir noktaya taşımak istiyoruz — bizi bu yolu sürdürmeye ve büyütmeye güç verecek bir istikrar. Bu bizim için sadece kişisel bir hedef değil. Karanlıkta yanan her ışığın, başkalarına da yol gösterebileceğine inanıyoruz. Hâlâ umutluyuz. Çünkü bu hikâye henüz bitmedi."
+      ],
+      "image": {
+        "src": "/images/story/mh-craft-studio-khatam-kari-artist-and-son.webp",
+        "alt": "Hatem desen şeritlerini dikkatle birleştiren eller, yaşayan bir mirasın sürekliliğini simgeliyor"
+      }
+    }
+  ]
+}

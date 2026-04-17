@@ -1,28 +1,62 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { DEFAULT_LANG, normalizeLang, type Lang } from './i18n';
 
-export type HomePageEntry = CollectionEntry<'pages'>;
-export type HomePageContent = HomePageEntry['data'];
+export type PageEntry = CollectionEntry<'pages'>;
+export type HomePageContent = Extract<PageEntry['data'], { pageId: 'home' }>;
+export type StoryPageContent = Extract<PageEntry['data'], { pageId: 'story' }>;
 export type PortfolioEntry = CollectionEntry<'portfolio'>;
 
 const hasLocalePrefix = (entryId: string, lang: Lang) => {
   return entryId.startsWith(`${lang}/`);
 };
 
+const isHomePageEntry = (
+  entry: PageEntry,
+  lang: Lang,
+): entry is PageEntry & { data: HomePageContent } => {
+  return entry.data.pageId === 'home' && hasLocalePrefix(entry.id, lang);
+};
+
+const isStoryPageEntry = (
+  entry: PageEntry,
+  lang: Lang,
+): entry is PageEntry & { data: StoryPageContent } => {
+  return entry.data.pageId === 'story' && hasLocalePrefix(entry.id, lang);
+};
+
 export const getHomePageContent = async (lang: string): Promise<HomePageContent> => {
   const activeLang = normalizeLang(lang);
   const pages = await getCollection('pages');
 
-  const page = pages.find((entry) => entry.data.pageId === 'home' && hasLocalePrefix(entry.id, activeLang));
+  const page = pages.find((entry) => isHomePageEntry(entry, activeLang));
 
   if (page) {
     return page.data;
   }
 
-  const fallbackPage = pages.find((entry) => entry.data.pageId === 'home' && hasLocalePrefix(entry.id, DEFAULT_LANG));
+  const fallbackPage = pages.find((entry) => isHomePageEntry(entry, DEFAULT_LANG));
 
   if (!fallbackPage) {
     throw new Error('Missing fallback home page content for default locale.');
+  }
+
+  return fallbackPage.data;
+};
+
+export const getStoryPageContent = async (lang: string): Promise<StoryPageContent> => {
+  const activeLang = normalizeLang(lang);
+  const pages = await getCollection('pages');
+
+  const page = pages.find((entry) => isStoryPageEntry(entry, activeLang));
+
+  if (page) {
+    return page.data;
+  }
+
+  const fallbackPage = pages.find((entry) => isStoryPageEntry(entry, DEFAULT_LANG));
+
+  if (!fallbackPage) {
+    throw new Error('Missing fallback story page content for default locale.');
   }
 
   return fallbackPage.data;

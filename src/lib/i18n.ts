@@ -14,13 +14,14 @@ export const translations = {
     nav: {
       home: 'Home',
       mission: 'Mission',
-      story: 'Story',
+      story: 'Our Story',
       milestones: 'Milestones',
       transparency: 'Transparency',
     },
     ui: {
       selectLanguage: 'Select language',
       openNavigationMenu: 'Open navigation menu',
+      readOurStory: 'Read Our Story',
       viewFullPortfolio: 'View Full Portfolio',
       selectedMasterpieces: 'Selected',
       selectedMasterpiecesAccent: 'Masterpieces',
@@ -50,13 +51,14 @@ export const translations = {
     nav: {
       home: 'Ana Sayfa',
       mission: 'Misyon',
-      story: 'Hikaye',
+      story: 'Hikayemiz',
       milestones: 'Aşamalar',
       transparency: 'Şeffaflık',
     },
     ui: {
       selectLanguage: 'Dil seçin',
       openNavigationMenu: 'Gezinme menüsünü aç',
+      readOurStory: 'Hikayemizi Oku',
       viewFullPortfolio: 'Tüm Portfolyoyu Gör',
       selectedMasterpieces: 'Seçilmiş',
       selectedMasterpiecesAccent: 'Eserler',
@@ -86,13 +88,14 @@ export const translations = {
     nav: {
       home: 'خانه',
       mission: 'ماموریت',
-      story: 'داستان',
+      story: 'داستان ما',
       milestones: 'مراحل',
       transparency: 'شفافیت',
     },
     ui: {
       selectLanguage: 'انتخاب زبان',
       openNavigationMenu: 'باز کردن منوی ناوبری',
+      readOurStory: 'داستان ما را بخوانید',
       viewFullPortfolio: 'مشاهده همه نمونه‌کارها',
       selectedMasterpieces: 'آثار',
       selectedMasterpiecesAccent: 'برگزیده',

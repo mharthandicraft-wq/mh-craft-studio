@@ -1,9 +1,8 @@
 ---
 /* Transparency section with a documentary and trust-focused design */
-import { getTranslations, localizeHashLink, normalizeLang } from '../lib/i18n';
 
 interface Props {
-  lang: string;
+  lang?: string;
   content: {
     eyebrow: string;
     title: string;
@@ -16,9 +15,7 @@ interface Props {
   };
 }
 
-const { lang, content } = Astro.props;
-const activeLang = normalizeLang(lang);
-const t = getTranslations(activeLang);
+const { content } = Astro.props;
 ---
 
 <section class="w-full py-20 md:py-32 px-6 md:px-12 bg-theme-base  relative overflow-hidden transition-colors duration-500">
@@ -59,12 +56,6 @@ const t = getTranslations(activeLang);
           {content.description}
         </p>
         
-        <a href={localizeHashLink(activeLang, 'transparency')} class="inline-flex items-center gap-4 text-brand-gold font-sans text-sm uppercase tracking-[0.2em] group border-b border-brand-gold/30 pb-2 hover:text-theme hover:border-theme transition-all">
-          {t.ui.viewTransparencySection}
-          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
       </div>
 
       
