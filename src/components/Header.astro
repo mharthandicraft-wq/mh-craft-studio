@@ -1,11 +1,16 @@
 ---
 // Header.astro
 import AnimatedHeader from './react/AnimatedHeader.tsx';
+
+const normalizedPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const isHomePage = normalizedPath === '/' || /^\/(en|fa|tr)$/.test(normalizedPath);
 ---
 
-<header class="w-full py-0 px-6 md:px-12 ">
-  <div class="max-w-[1920px] mx-auto">
-    {/* client:load allows the Framer Motion animation to run on page load */}
-    <AnimatedHeader client:load />
-  </div>
-</header>
+{isHomePage && (
+  <header class="w-full py-0 px-6 md:px-12 ">
+    <div class="max-w-[1920px] mx-auto">
+      {/* client:load allows the Framer Motion animation to run on page load */}
+      <AnimatedHeader client:load />
+    </div>
+  </header>
+)}

@@ -17,7 +17,7 @@ const AnimatedHeader = () => {
   };
 
   return (
-    <h1 className="font-serif text-left tracking-tight flex items-center overflow-hidden">
+    <h1 dir="ltr" className="font-serif text-left justify-start tracking-tight flex items-center overflow-hidden">
       
       {/* "MH" - Bold, Solid Background to cover the sliding text */}
       <span className="font-bold text-theme text-[10vw] sm:text-[14vw] md:text-[160px] z-10 relative bg-theme-header-block pr-1.5 sm:pr-3 transition-colors duration-500">

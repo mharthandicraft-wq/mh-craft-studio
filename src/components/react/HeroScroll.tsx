@@ -1,7 +1,18 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const HeroScroll = () => {
+interface HeroContent {
+  image: {
+    src: string;
+    alt: string;
+  };
+  headline: string;
+  highlight: string;
+  summary: string;
+  story: string[];
+}
+
+const HeroScroll = ({ content }: { content: HeroContent }) => {
   const targetRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -23,8 +34,8 @@ const HeroScroll = () => {
         <div className="flex min-h-screen flex-col">
           <div className="relative h-[42vh] w-full sm:h-[48vh]">
             <img
-              src="/images/home/artisan-marquetry-jewelry-box.webp"
-              alt="Handcrafted Marquetry Art"
+              src={content.image.src}
+              alt={content.image.alt}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--color-page-bg)_10%,transparent)]" />
@@ -33,22 +44,22 @@ const HeroScroll = () => {
           <div className="flex flex-1 items-center justify-center bg-theme-base px-6 py-12 text-center transition-colors duration-500 sm:px-10 sm:py-16">
             <div className="mx-auto flex max-w-3xl flex-col items-center">
               <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-theme transition-colors duration-500 sm:text-5xl">
-                Hands That Create.<br />
-                <span className="text-brand-gold italic">A Craft That Survives.</span>
+                {content.headline}<br />
+                <span className="text-brand-gold italic">{content.highlight}</span>
               </h1>
               <p className="max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 sm:text-xl">
-                A family-led traditional craft workshop in İzmit, working to revive the art of Khatam and create sustainable training opportunities for vulnerable communities.
+                {content.summary}
               </p>
 
               <div className="mt-10 max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 sm:mt-12 sm:text-xl">
                 <p className="mb-6">
-                  We are a family of five who arrived in Türkiye as refugees 12 years ago and settled in İzmit.
+                  {content.story[0]}
                 </p>
                 <p className="mb-6 border-l-2 border-brand-gold/30 pl-4 text-center font-medium italic text-theme sm:px-4">
-                  We brought no resources with us — only our skills, our faith in work, and a traditional craft rooted in centuries of history: Khatam art.
+                  {content.story[1]}
                 </p>
                 <p>
-                  Over the years, we built a life focused on community support and service to displaced families, while quietly working to keep this fragile craft alive.
+                  {content.story[2]}
                 </p>
               </div>
             </div>
@@ -63,8 +74,8 @@ const HeroScroll = () => {
             className="relative h-full shrink-0"
           >
             <img
-              src="/images/home/artisan-marquetry-jewelry-box.webp"
-              alt="Handcrafted Marquetry Art"
+              src={content.image.src}
+              alt={content.image.alt}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--color-page-bg)_10%,transparent)]" />
@@ -76,11 +87,11 @@ const HeroScroll = () => {
               className="absolute inset-0 flex flex-col justify-center px-6 md:px-16"
             >
               <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-theme transition-colors duration-500 md:text-5xl lg:text-6xl">
-                Hands That Create.<br/>
-                <span className="text-brand-gold italic">A Craft That Survives.</span>
+                {content.headline}<br/>
+                <span className="text-brand-gold italic">{content.highlight}</span>
               </h1>
               <p className="max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 md:text-xl">
-                A family-led traditional craft workshop in İzmit, working to revive the art of Khatam and create sustainable training opportunities for vulnerable communities.
+                {content.summary}
               </p>
             </motion.div>
 
@@ -90,13 +101,13 @@ const HeroScroll = () => {
             >
               <div className="max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 md:text-xl">
                 <p className="mb-6">
-                  We are a family of five who arrived in Türkiye as refugees 12 years ago and settled in İzmit.
+                  {content.story[0]}
                 </p>
                 <p className="mb-6 border-l-2 border-brand-gold/30 pl-4 font-medium italic text-theme">
-                  We brought no resources with us — only our skills, our faith in work, and a traditional craft rooted in centuries of history: Khatam art.
+                  {content.story[1]}
                 </p>
                 <p>
-                  Over the years, we built a life focused on community support and service to displaced families, while quietly working to keep this fragile craft alive.
+                  {content.story[2]}
                 </p>
               </div>
             </motion.div>

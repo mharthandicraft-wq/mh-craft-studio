@@ -1,0 +1,206 @@
+{
+  "locale": "tr",
+  "pageId": "home",
+  "hero": {
+    "image": {
+      "src": "/images/home/artisan-marquetry-jewelry-box.webp",
+      "alt": "Ayrıntılı hatem işçiliğini gösteren el yapımı hatem mücevher kutusu"
+    },
+    "headline": "Üreten Eller.",
+    "highlight": "Yaşayan Bir Zanaat.",
+    "summary": "İzmit'te faaliyet gösteren aile odaklı geleneksel bir zanaat atölyesi olarak, hatem sanatını yeniden canlandırmak ve kırılgan topluluklar için sürdürülebilir eğitim fırsatları oluşturmak için çalışıyoruz.",
+    "story": [
+      "Biz, 12 yıl önce mülteci olarak Türkiye'ye gelen ve İzmit'e yerleşen beş kişilik bir aileyiz.",
+      "Yanımızda hiçbir kaynak getirmedik; yalnızca becerilerimizi, emeğe olan inancımızı ve yüzyıllara dayanan bir geleneğe kök salmış hatem sanatını getirdik.",
+      "Yıllar içinde, yerinden edilmiş ailelere destek ve hizmet odaklı bir yaşam kurarken bu kırılgan zanaatı sessizce yaşatmaya çalıştık."
+    ]
+  },
+  "pillars": {
+    "title": "Çalışmamızın Üç Temel Ayağı",
+    "description": "Vizyonumuz, geleneksel zanaatkarlığı modern dijital araçlarla birleştirerek sürdürülebilir bir yaratıcı ekosistem kurmaktır.",
+    "items": [
+      {
+        "title": "Koruma",
+        "description": "Tehlike altındaki geleneksel zanaat tekniklerini yaşatmak."
+      },
+      {
+        "title": "Güçlendirme",
+        "description": "Mülteci toplulukları için eğitim ve geçim fırsatları oluşturmak."
+      },
+      {
+        "title": "Küresel Erişim",
+        "description": "El yapımı özgün üretimleri dijital görünürlük sayesinde daha geniş kitlelerle buluşturmak."
+      }
+    ]
+  },
+  "vision": {
+    "title": "Neyi Hedefliyoruz",
+    "paragraphs": [
+      "Odaklı ve ölçeklenebilir bir zanaat girişimi kurmak için çalışıyoruz. Hedeflerimiz arasında her yıl küçük bir zanaatkar grubunu yetiştirmek, güvenilir bir atölye kurmak ve kalite ile tutarlılığı sağlayan bir üretim süreci geliştirmek bulunuyor. Aynı zamanda dijital platformlar üzerinden erişimimizi genişleterek ürünlerimizi küresel kitlelere ulaştırmayı amaçlıyoruz.",
+      "Misyonumuz, hatem sanatını bilgisini yeni bir üretici kuşağa aktararak yeniden canlandırmaktır. Yetersiz imkanlara sahip topluluklardan bireyleri desteklemeye, onlara onur, bağımsızlık ve yaratıcı ifade sağlayan beceriler kazandırmaya odaklanıyoruz. Bu yolculukta kültürel mirası korurken insanlar için gerçek fırsatlar oluşturmak istiyoruz."
+    ],
+    "goals": [
+      "Geleneksel zanaatı korumak",
+      "Her yıl 5 zanaatkar yetiştirmek",
+      "Sürdürülebilir bir üretim sistemi kurmak"
+    ]
+  },
+  "phases": {
+    "title": "Bu Süreç Nasıl Büyür",
+    "items": [
+      {
+        "label": "Aşama 01 (Ay 1–2)",
+        "title": "Kurulum",
+        "steps": [
+          "Küçük bir atölye alanı sağlamak",
+          "Temel araç ve malzemeleri temin etmek",
+          "Düzenli bir çalışma ortamı oluşturmak"
+        ]
+      },
+      {
+        "label": "Aşama 02 (Ay 3–4)",
+        "title": "Yeniden Başlangıç",
+        "steps": [
+          "Küçük ölçekli üretime yeniden başlamak",
+          "Kalite ve tutarlılığa odaklanmak",
+          "Çalışma ritmini yeniden kurmak"
+        ]
+      },
+      {
+        "label": "Aşama 03 (Ay 5–6)",
+        "title": "Paylaşım",
+        "steps": [
+          "Becerileri çok küçük bir öğrenci grubuyla paylaşmaya başlamak",
+          "Süreci şeffaflık ve eğitim için belgelemek"
+        ]
+      },
+      {
+        "label": "Aşama 04 (6+ Ay)",
+        "title": "Süreklilik",
+        "steps": [
+          "Kapasiteye göre kademeli büyümek",
+          "Yalnızca istikrar sağlandığında genişlemek"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Deneyimimiz ve Yetkinliğimiz",
+    "title": "Bu Çalışmaya Ne Taşıyoruz",
+    "intro": "Bu proje, yıllara dayanan yaşam tecrübesi ve gerçek üretim pratiği üzerine kuruludur:",
+    "quote": "Kendimizi büyük bir kurum olarak sunmuyoruz; zaman içinde öğrendiğimiz araçlarla bir zanaatı sürdüren küçük bir aile olarak varız.",
+    "items": [
+      "Bir aile olarak Türkiye'de on yılı aşkın yaşam ve hizmet deneyimi",
+      "Geleneksel hatem zanaatında uzun süreli uygulama",
+      "Zanaat sürecimizi video içerikleriyle belgelemek konusunda deneyim",
+      "Çalışma yolculuğumuzu paylaştığımız daha önce aktif bir çevrim içi varlık",
+      "Web sitesi üretimi ve UX/UI tasarımı gibi dijital araçlara dair pratik bilgi",
+      "Çevrim içi platformlar ve içerik temelli görünürlük konusunda aşinalık"
+    ]
+  },
+  "portfolioPreview": {
+    "eyebrow": "Portfolyo Ön İzleme",
+    "title": "Çalışmalarımız",
+    "description": "Yolculuğumuzun farklı dönemlerinde ürettiğimiz el yapımı işlerden seçilmiş örnekler."
+  },
+  "statusAndChallenges": {
+    "reality": {
+      "eyebrow": "Gerçeklik",
+      "title": "Sanatın Neden",
+      "accent": "Beklemesi Gerekiyor",
+      "description": "Durmadık; yalnızca yeniden ayağa kalkmak için gerekli yapısal desteğe ulaşacağımız ana kadar gücümüzü koruyoruz.",
+      "items": [
+        {
+          "id": "01",
+          "title": "Atölye Alanı",
+          "description": "Hatemkari, hassas yapıştırma ve kesim için istikrarlı ve tozsuz bir ortam gerektirir. Şu anda sınırlı bir yaşam alanında çalışıyoruz."
+        },
+        {
+          "id": "02",
+          "title": "Hassas Araçlar",
+          "description": "Bu zanaat özel testerelere ve preslere dayanır. Bunlar olmadan yalnızca çok küçük ölçekli üretim yapabiliyoruz."
+        },
+        {
+          "id": "03",
+          "title": "Ham Maddeler",
+          "description": "Nitelikli pirinç, kemik ve ahşap temini ön sermaye gerektirir; şu anda bu kaynaklar temel yaşam ihtiyaçlarına ayrılıyor."
+        }
+      ]
+    },
+    "currentSituation": {
+      "eyebrow": "Mevcut Durumumuz",
+      "title": "Şu Anda",
+      "accent": "Neredeyiz",
+      "description": "Bu aşamada çalışmamız çok sınırlı ve istikrarsız bir ortamda sürüyor.",
+      "points": [
+        "Kendimize ait bir atölye alanımız yok",
+        "Araç ve ekipmanlarımız sınırlı",
+        "Şu anda istikrarlı ve düzenli üretim yapamıyoruz",
+        "Zamanımızın büyük bölümü günlük işlere ve yaşamı sürdürme gerekliliklerine ayrılıyor"
+      ],
+      "quote": "Buna rağmen, mümkün olduğunda bu zanaatı küçük ve gayriresmî yollarla korumaya devam ediyoruz."
+    }
+  },
+  "whyContinue": {
+    "eyebrow": "Felsefemiz",
+    "title": "Neden",
+    "accent": "Devam Ediyoruz",
+    "paragraphs": [
+      "Hatem, sabır ve hassasiyet gerektiren ince ve zaman yoğun bir zanaattır. Bu zanaat, uygulayıcılarının azalmasıyla yavaş yavaş kaybolan daha geniş bir kültürel mirasın parçasıdır.",
+      "Aynı zamanda, bir zanaat öğrenmenin yeni bir yerde hayatını yeniden kuran insanlar için düzen, onur ve odak sağlayabildiğini gördük."
+    ],
+    "quote": "Bizim için bu çalışma yalnızca üretim değildir. O, hafıza, kimlik ve sürekliliktir."
+  },
+  "supportNeeds": {
+    "eyebrow": "Desteğin Mümkün Kıldığı Şey",
+    "title": "Bizim",
+    "accent": "Talebimiz",
+    "quote": "Bu destek büyüme için değil, istikrarlı bir temeli yeniden kurmak için kullanılacaktır.",
+    "items": [
+      {
+        "id": "01",
+        "title": "Atölye Alanı",
+        "description": "İstikrarlı ve profesyonel üretime yeniden başlamak için küçük ve özel bir alan."
+      },
+      {
+        "id": "02",
+        "title": "Araçlar ve Malzemeler",
+        "description": "Geleneksel hatem zanaati için gerekli temel ekipman ve nitelikli ham maddeler."
+      },
+      {
+        "id": "03",
+        "title": "Temel Destek",
+        "description": "Kurulum maliyetlerini karşılamak ve geçiş sürecinde sürekliliği korumak için hibe, sponsorluk veya temel destek."
+      }
+    ]
+  },
+  "transparency": {
+    "eyebrow": "Şeffaflık",
+    "title": "Açıklığa",
+    "accent": "Bağlılık",
+    "description": "Güvenin açıklıkla kurulduğunu biliyoruz. Desteğinizin gerçek dünyada zanaatın korunmasına nasıl dönüştüğünü göstermek bizim sorumluluğumuzdur.",
+    "items": [
+      {
+        "title": "İlerleme güncellemeleri paylaşmak",
+        "description": "Destekçilerimizle düzenli kilometre taşlarını paylaşmak."
+      },
+      {
+        "title": "Atölye gelişimini belgelemek",
+        "description": "Yeni alanın adım adım görsel raporlarını sunmak."
+      },
+      {
+        "title": "Gerçek üretimi ve süreci göstermek",
+        "description": "Zanaatın ve günlük emeğin perde arkasını görünür kılmak."
+      },
+      {
+        "title": "Mali şeffaflık",
+        "description": "Her destek veya katkının nasıl kullanıldığını açık biçimde raporlamak."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Yaşayan Bir Zanaat İçin",
+    "accent": "Küçük Bir Alanı Yeniden Kuralım",
+    "description": "İstikrarlı bir çalışma alanıyla bu zanaat yaşamaya devam edebilir ve ondan fayda görebilecek başkalarıyla yavaş yavaş paylaşılabilir."
+  }
+}

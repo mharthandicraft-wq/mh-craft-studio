@@ -1,7 +1,36 @@
 ---
 import ThemeToggle from './react/ThemeToggle';
+import {
+  SUPPORTED_LANGS,
+  buildLanguageSwitchPath,
+  getTranslations,
+  localizeHashLink,
+  normalizeLang,
+  type Lang,
+} from '../lib/i18n';
 
-const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
+interface Props {
+  lang: string;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const activeLang = normalizeLang(lang);
+const t = getTranslations(activeLang);
+
+const navItems = [
+  { key: 'home', href: localizeHashLink(activeLang, 'home'), label: t.nav.home },
+  { key: 'mission', href: localizeHashLink(activeLang, 'mission'), label: t.nav.mission },
+  { key: 'story', href: localizeHashLink(activeLang, 'story'), label: t.nav.story },
+  { key: 'milestones', href: localizeHashLink(activeLang, 'milestones'), label: t.nav.milestones },
+  { key: 'transparency', href: localizeHashLink(activeLang, 'transparency'), label: t.nav.transparency },
+];
+
+const languageOptions = SUPPORTED_LANGS.map((optionLang) => ({
+  value: buildLanguageSwitchPath(optionLang, currentPath),
+  label: optionLang.toUpperCase(),
+  selected: optionLang === activeLang,
+}));
 ---
 <!-- Navbar.astro - Secondary Navigation Bar -->
 
@@ -11,10 +40,10 @@ const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
       {navItems.map((item) => (
         <li>
           <a 
-            href={`#${item}`} 
+            href={item.href}
             class="font-sans text-sm uppercase tracking-widest text-theme-muted hover:text-brand-gold transition-colors duration-300 ease-in-out"
           >
-            {item.replace('-', ' ')}
+            {item.label}
           </a>
         </li>
       ))}
@@ -24,15 +53,15 @@ const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
       <ThemeToggle client:load />
 
       <div class="relative">
-        <label for="language-select" class="sr-only">Select language</label>
+        <label for="language-select" class="sr-only">{t.ui.selectLanguage}</label>
         <select
           id="language-select"
           class="font-sans text-sm uppercase tracking-widest text-theme-muted bg-transparent border border-theme rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
-          onchange="if (this.value) window.location.href=this.value"
+          onchange="if (this.value) window.location.href=this.value + window.location.hash"
         >
-          <option value="/en" selected>EN</option>
-          <option value="/tr">TR</option>
-          <option value="/fa">FA</option>
+          {languageOptions.map((option) => (
+            <option value={option.value} selected={option.selected}>{option.label}</option>
+          ))}
         </select>
         <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-theme-soft">▾</span>
       </div>
@@ -45,15 +74,15 @@ const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
         <ThemeToggle client:load />
 
         <div class="relative">
-          <label for="language-select-mobile" class="sr-only">Select language</label>
+          <label for="language-select-mobile" class="sr-only">{t.ui.selectLanguage}</label>
           <select
             id="language-select-mobile"
             class="font-sans text-sm uppercase tracking-widest text-theme-muted bg-transparent border border-theme rounded px-3 py-2 appearance-none pr-8 hover:border-brand-gold hover:text-brand-gold transition-colors duration-300 ease-in-out"
-            onchange="if (this.value) window.location.href=this.value"
+            onchange="if (this.value) window.location.href=this.value + window.location.hash"
           >
-            <option value="/en" selected>EN</option>
-            <option value="/tr">TR</option>
-            <option value="/fa">FA</option>
+            {languageOptions.map((option) => (
+              <option value={option.value} selected={option.selected}>{option.label}</option>
+            ))}
           </select>
           <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-theme-soft">▾</span>
         </div>
@@ -62,9 +91,9 @@ const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
       <details class="relative">
         <summary
           class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded border border-theme text-theme transition-colors duration-300 hover:border-brand-gold hover:text-brand-gold [&::-webkit-details-marker]:hidden"
-          aria-label="Toggle navigation menu"
+          aria-label={t.ui.openNavigationMenu}
         >
-          <span class="sr-only">Open navigation menu</span>
+          <span class="sr-only">{t.ui.openNavigationMenu}</span>
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
             <path d="M4 7h16" />
             <path d="M4 12h16" />
@@ -77,10 +106,10 @@ const navItems = ['home', 'mission', 'story', 'milestones', 'transparency'];
             {navItems.map((item) => (
               <li>
                 <a 
-                  href={`#${item}`} 
+                  href={item.href}
                   class="block font-sans text-sm uppercase tracking-widest text-theme-muted hover:text-brand-gold transition-colors duration-300 ease-in-out"
                 >
-                  {item.replace('-', ' ')}
+                  {item.label}
                 </a>
               </li>
             ))}

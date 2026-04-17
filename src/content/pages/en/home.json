@@ -1,0 +1,206 @@
+{
+  "locale": "en",
+  "pageId": "home",
+  "hero": {
+    "image": {
+      "src": "/images/home/artisan-marquetry-jewelry-box.webp",
+      "alt": "Handcrafted Khatam jewelry box showing detailed marquetry work"
+    },
+    "headline": "Hands That Create.",
+    "highlight": "A Craft That Survives.",
+    "summary": "A family-led traditional craft workshop in İzmit, working to revive the art of Khatam and create sustainable training opportunities for vulnerable communities.",
+    "story": [
+      "We are a family of five who arrived in Türkiye as refugees 12 years ago and settled in İzmit.",
+      "We brought no resources with us — only our skills, our faith in work, and a traditional craft rooted in centuries of history: Khatam art.",
+      "Over the years, we built a life focused on community support and service to displaced families, while quietly working to keep this fragile craft alive."
+    ]
+  },
+  "pillars": {
+    "title": "The Three Pillars of Our Work",
+    "description": "Our vision is to combine traditional craftsmanship with modern digital tools to create a sustainable creative ecosystem.",
+    "items": [
+      {
+        "title": "Preservation",
+        "description": "Keeping endangered traditional craftsmanship techniques alive."
+      },
+      {
+        "title": "Empowerment",
+        "description": "Providing training and creating employment opportunities for refugee communities."
+      },
+      {
+        "title": "Global Reach",
+        "description": "Sharing authentic handmade work with wider audiences through digital visibility."
+      }
+    ]
+  },
+  "vision": {
+    "title": "What We Are Working Toward",
+    "paragraphs": [
+      "We are working toward building a focused and scalable craft initiative. Our objectives include training a small group of artisans each year, setting up a reliable workshop, and developing a production process that ensures quality and consistency. At the same time, we aim to expand our reach through digital platforms, making our products accessible to a global audience.",
+      "Our mission is to revive the art of Khatam by passing its knowledge to a new generation of makers. We focus on supporting individuals from underserved communities, helping them develop skills that lead to dignity, independence, and creative expression. Through this journey, we aim to protect cultural heritage while building real opportunities for people."
+    ],
+    "goals": [
+      "Preserve traditional craft",
+      "Train 5 artisans per year",
+      "Build a sustainable production system"
+    ]
+  },
+  "phases": {
+    "title": "How This Would Grow",
+    "items": [
+      {
+        "label": "Phase 01 (Months 1–2)",
+        "title": "Setup",
+        "steps": [
+          "Secure a small workshop space",
+          "Acquire essential tools and materials",
+          "Reorganize a stable working environment"
+        ]
+      },
+      {
+        "label": "Phase 02 (Months 3–4)",
+        "title": "Restart",
+        "steps": [
+          "Begin small-scale production again",
+          "Focus on quality and consistency",
+          "Rebuild working rhythm"
+        ]
+      },
+      {
+        "label": "Phase 03 (Months 5–6)",
+        "title": "Sharing",
+        "steps": [
+          "Begin sharing skills with a very small group of learners",
+          "Document the process for transparency and education"
+        ]
+      },
+      {
+        "label": "Phase 04 (6+ Months)",
+        "title": "Continuity",
+        "steps": [
+          "Gradual growth based on capacity",
+          "Expand only if stability is achieved"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Our Experience & Capabilities",
+    "title": "What We Bring Into This Work",
+    "intro": "This project is built on years of lived practice and real-world experience:",
+    "quote": "We do not present ourselves as a large institution, but as a small family continuing a craft with the tools we have learned over time.",
+    "items": [
+      "Over a decade of life and service in Türkiye as a family",
+      "Long-term practice in traditional Khatam craftsmanship",
+      "Experience documenting our craft process through video content",
+      "A previously active online presence where we shared our work journey",
+      "Practical understanding of digital tools such as website creation and UX/UI design",
+      "Familiarity with online platforms and content-based outreach"
+    ]
+  },
+  "portfolioPreview": {
+    "eyebrow": "Portfolio Preview",
+    "title": "Our Work",
+    "description": "A selection of handcrafted pieces created during different stages of our journey."
+  },
+  "statusAndChallenges": {
+    "reality": {
+      "eyebrow": "The Reality",
+      "title": "Why the Art",
+      "accent": "Must Wait",
+      "description": "We have not stopped; we are preserving our energy until the moment we have the structural support to rebuild.",
+      "items": [
+        {
+          "id": "01",
+          "title": "Workshop Space",
+          "description": "Khatam-kari requires a stable, dust-free environment for precise gluing and cutting. Currently, we work from a limited living space."
+        },
+        {
+          "id": "02",
+          "title": "Precision Tools",
+          "description": "The craft depends on specialized saws and presses. Without them, we can only produce small-scale items."
+        },
+        {
+          "id": "03",
+          "title": "Raw Materials",
+          "description": "Sourcing high-quality brass, bone, and wood requires upfront capital that is currently prioritized for survival."
+        }
+      ]
+    },
+    "currentSituation": {
+      "eyebrow": "Our Current Situation",
+      "title": "Where We",
+      "accent": "Are Now",
+      "description": "At this stage, our work continues in a very limited and unstable environment.",
+      "points": [
+        "We do not have a dedicated workshop space",
+        "We have limited tools and equipment",
+        "We are not currently producing at a stable or consistent level",
+        "Most of our time is divided between daily work and sustaining life needs"
+      ],
+      "quote": "Despite this, we continue to protect the craft in a small and informal way whenever possible."
+    }
+  },
+  "whyContinue": {
+    "eyebrow": "Our Philosophy",
+    "title": "Why We",
+    "accent": "Continue",
+    "paragraphs": [
+      "Khatam is a delicate and time-intensive craft that requires patience and precision. It is part of a broader cultural heritage that is slowly disappearing as fewer people continue the practice.",
+      "At the same time, we have seen how learning a craft can bring structure, dignity, and focus to individuals who are rebuilding their lives in a new place."
+    ],
+    "quote": "For us, this work is not only production. It is memory, identity, and continuity."
+  },
+  "supportNeeds": {
+    "eyebrow": "What Support Makes Possible",
+    "title": "What We Are",
+    "accent": "Asking For",
+    "quote": "This support would not be used for expansion, but for rebuilding a stable foundation.",
+    "items": [
+      {
+        "id": "01",
+        "title": "Workshop Space",
+        "description": "A small, dedicated environment to restart stable and professional production."
+      },
+      {
+        "id": "02",
+        "title": "Tools & Materials",
+        "description": "The basic equipment and high-quality raw materials required for traditional Khatam craftsmanship."
+      },
+      {
+        "id": "03",
+        "title": "Foundational Support",
+        "description": "Support, grant, or sponsorship to cover initial setup costs and ensure continuity during the transition."
+      }
+    ]
+  },
+  "transparency": {
+    "eyebrow": "Transparency",
+    "title": "Commitment to",
+    "accent": "Openness",
+    "description": "We understand that trust is built through clarity. It is our responsibility to show exactly how your support translates into real-world craft preservation.",
+    "items": [
+      {
+        "title": "Sharing updates on progress",
+        "description": "Regular milestones shared with our supporters."
+      },
+      {
+        "title": "Documenting workshop development",
+        "description": "Step-by-step visual reports on the new space."
+      },
+      {
+        "title": "Showing real production and process",
+        "description": "Behind-the-scenes views of the craftsmanship and the daily work."
+      },
+      {
+        "title": "Financial transparency",
+        "description": "Clear reporting on how every grant or support contribution is used."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Help Us Rebuild a Small Space",
+    "accent": "for a Living Craft",
+    "description": "With a stable workspace, this craft can continue to exist and slowly be shared with others who may benefit from learning it."
+  }
+}
