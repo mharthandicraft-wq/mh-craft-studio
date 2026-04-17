@@ -24,6 +24,8 @@
     --color-surface: rgba(255, 255, 255, 0.92);
     --color-surface-strong: #ffffff;
     --color-elevated-surface: rgba(255, 255, 255, 0.78);
+    --color-media-overlay: rgba(36, 36, 36, 0.42);
+    --color-media-foreground: #ffffff;
     --color-header-block: #fdfcfb;
     --color-foreground: #242424;
     --color-foreground-rgb: 36 36 36;
@@ -44,6 +46,8 @@
     --color-surface: rgba(255, 255, 255, 0.01);
     --color-surface-strong: rgba(255, 255, 255, 0.02);
     --color-elevated-surface: rgba(8, 18, 38, 0.6);
+    --color-media-overlay: rgba(8, 18, 38, 0.58);
+    --color-media-foreground: #ffffff;
     --color-header-block: #081226;
     --color-foreground: #ffffff;
     --color-foreground-rgb: 255 255 255;
@@ -116,6 +120,10 @@
     background-color: var(--color-elevated-surface);
   }
 
+  .bg-theme-media-overlay {
+    background-color: var(--color-media-overlay);
+  }
+
   .theme-card {
     background-color: var(--color-surface);
     border-color: var(--color-border-strong);
@@ -164,7 +172,7 @@
   }
 
   .text-theme-media {
-    color: #ffffff;
+    color: var(--color-media-foreground);
   }
 
   .border-theme-soft {

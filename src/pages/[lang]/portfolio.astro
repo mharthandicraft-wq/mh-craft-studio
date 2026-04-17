@@ -1,0 +1,30 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import PortfolioGrid from '../../components/PortfolioGrid.tsx';
+import { getPortfolioProjects } from '../../lib/content';
+import { SUPPORTED_LANGS, getTranslations, normalizeLang } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const activeLang = normalizeLang(Astro.params.lang);
+const t = getTranslations(activeLang);
+const allProjects = await getPortfolioProjects(activeLang);
+---
+
+<MainLayout title={t.portfolioTitle} lang={activeLang}>
+  <section class="pt-32 pb-20 px-6 md:px-12 bg-theme-base min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <header class="mb-20">
+        <h1 class="font-serif text-5xl md:text-7xl text-theme leading-tight">
+          {t.ui.selectedMasterpieces} <span class="italic text-brand-gold">{t.ui.selectedMasterpiecesAccent}</span>
+        </h1>
+      </header>
+
+      <PortfolioGrid projects={allProjects} lang={activeLang} client:load />
+    </div>
+  </section>
+</MainLayout>

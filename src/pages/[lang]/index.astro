@@ -1,0 +1,21 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import HomePageContent from '../../components/HomePageContent.astro';
+import { getHomePageContent, getPortfolioProjects } from '../../lib/content';
+import { SUPPORTED_LANGS, getTranslations, normalizeLang } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const activeLang = normalizeLang(Astro.params.lang);
+const t = getTranslations(activeLang);
+const content = await getHomePageContent(activeLang);
+const projects = await getPortfolioProjects(activeLang);
+---
+
+<MainLayout title={t.brandHomeTitle} lang={activeLang}>
+  <HomePageContent lang={activeLang} content={content} projects={projects} />
+</MainLayout>

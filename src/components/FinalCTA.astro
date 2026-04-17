@@ -1,5 +1,19 @@
 ---
 /* Final CTA section - The bridge between the story and the action */
+import { getTranslations, localizeHashLink, normalizeLang } from '../lib/i18n';
+
+interface Props {
+  lang: string;
+  content: {
+    title: string;
+    accent: string;
+    description: string;
+  };
+}
+
+const { lang, content } = Astro.props;
+const activeLang = normalizeLang(lang);
+const t = getTranslations(activeLang);
 ---
 
 <section class="w-full py-32 px-6 md:px-12 bg-theme-base relative overflow-hidden transition-colors duration-500">
@@ -11,22 +25,22 @@
     
 
     <h2 class="font-serif text-4xl md:text-6xl text-theme mb-8 leading-tight">
-      Help Us Rebuild a Small Space <br /> 
-      <span class="italic text-brand-gold">for a Living Craft</span>
+          {content.title} <br /> 
+          <span class="italic text-brand-gold">{content.accent}</span>
     </h2>
 
     <p class="font-sans text-theme-muted text-lg md:text-xl leading-relaxed mb-16 max-w-2xl mx-auto">
-      With a stable workspace, this craft can continue to exist, and slowly be shared with others who may benefit from learning it.
+          {content.description}
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
       
-      <a href="/support" class="w-full sm:w-auto px-10 py-5 bg-brand-gold text-theme-contrast font-sans font-bold uppercase tracking-widest text-sm hover:brightness-105 transition-colors duration-300 rounded-sm">
-        Support This Project
+      <a href={localizeHashLink(activeLang, 'support')} class="w-full sm:w-auto px-10 py-5 bg-brand-gold text-theme-contrast font-sans font-bold uppercase tracking-widest text-sm hover:brightness-105 transition-colors duration-300 rounded-sm">
+        {t.ui.supportThisProject}
       </a>
 
       <a href="https://buymeacoffee.com/yourlink" target="_blank" class="w-full sm:w-auto px-10 py-5 border border-theme text-theme font-sans font-bold uppercase tracking-widest text-sm hover:bg-theme-surface transition-colors duration-300 rounded-sm">
-        Buy Me a Coffee
+        {t.ui.buyMeACoffee}
       </a>
 
     </div>
@@ -36,7 +50,7 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
-        Download Full Proposal (PDF)
+        {t.ui.downloadProposal}
       </a>
     </div>
 

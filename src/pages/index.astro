@@ -1,5 +1,21 @@
 ---
-// This is the root index file.
-// Its only purpose is to redirect users to the default language directory.
+import { DEFAULT_LANG, SUPPORTED_LANGS } from '../lib/i18n';
+
+const fallbackPath = `/${DEFAULT_LANG}`;
 ---
-<meta http-equiv="refresh" content="0;url=/en/" />
+
+<script is:inline define:vars={{ fallbackPath, supportedLangs: SUPPORTED_LANGS }}>
+	const preferredLanguages = Array.isArray(navigator.languages) && navigator.languages.length > 0
+		? navigator.languages
+		: [navigator.language];
+
+	const matchedLanguage = preferredLanguages
+		.map((language) => String(language).toLowerCase().split('-')[0])
+		.find((language) => supportedLangs.includes(language));
+
+	window.location.replace(matchedLanguage ? `/${matchedLanguage}` : fallbackPath);
+</script>
+
+<noscript>
+	<meta http-equiv="refresh" content={`0;url=${fallbackPath}`} />
+</noscript>

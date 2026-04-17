@@ -1,0 +1,50 @@
+---
+import HeroScroll from './react/HeroScroll.tsx';
+import Pillars from './Pillars.astro';
+import Vision from './Vision.astro';
+import Phases from './Phases.astro';
+import Experience from './Experience.astro';
+import PortfolioHover from './PortfolioHover.tsx';
+import StatusAndChallenges from './StatusAndChallenges.tsx';
+import WhyContinue from './WhyContinue.astro';
+import SupportNeeds from './SupportNeeds.astro';
+import Transparency from './Transparency.astro';
+import FinalCTA from './FinalCTA.astro';
+
+interface Props {
+  lang: string;
+  content: import('../lib/content').HomePageContent;
+  projects: import('../lib/content').PortfolioEntry[];
+}
+
+const { lang, content, projects } = Astro.props;
+---
+
+<div id="home">
+  <HeroScroll client:load content={content.hero} />
+</div>
+
+<div id="mission">
+  <Pillars content={content.pillars} />
+  <Vision content={content.vision} />
+</div>
+
+<div id="milestones">
+  <Phases content={content.phases} />
+</div>
+
+<div id="story">
+  <Experience content={content.experience} />
+  <PortfolioHover client:visible lang={lang} content={content.portfolioPreview} projects={projects} />
+  <StatusAndChallenges client:visible content={content.statusAndChallenges} />
+  <WhyContinue content={content.whyContinue} />
+</div>
+
+<div id="support">
+  <SupportNeeds content={content.supportNeeds} />
+  <FinalCTA lang={lang} content={content.finalCta} />
+</div>
+
+<div id="transparency">
+  <Transparency lang={lang} content={content.transparency} />
+</div>
