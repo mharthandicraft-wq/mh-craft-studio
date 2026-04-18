@@ -155,7 +155,7 @@
     "eyebrow": "What Support Makes Possible",
     "title": "What We Are",
     "accent": "Asking For",
-    "quote": "This support would not be used for expansion, but for rebuilding a stable foundation.",
+    "quote": " we are asking for a chance to rebuild a stable foundation for craft, learning, and production.",
     "items": [
       {
         "id": "01",
@@ -171,6 +171,23 @@
         "id": "03",
         "title": "Foundational Support",
         "description": "Support, grant, or sponsorship to cover initial setup costs and ensure continuity during the transition."
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Be Part of the Start",
+        "href": "/en/be-part-of-the-start",
+        "variant": "primary"
+      },
+      {
+        "label": "For Organizations & NGOs",
+        "href": "/en/organization-supporter",
+        "variant": "secondary"
+      },
+      {
+        "label": "Buy Me a Coffee",
+        "href": "https://buymeacoffee.com/mhcraftstudio",
+        "variant": "outline"
       }
     ]
   },

@@ -11,6 +11,11 @@ interface Props {
       title: string;
       description: string;
     }>;
+    buttons?: Array<{
+      label: string;
+      href: string;
+      variant: 'primary' | 'secondary' | 'outline';
+    }>;
   };
 }
 
@@ -34,6 +39,37 @@ const { content } = Astro.props;
             "{content.quote}"
           </p>
         </div>
+
+        {content.buttons && content.buttons.length > 0 && (
+          <div class="flex flex-col gap-4 mt-10">
+            {content.buttons.map((btn) => (
+              btn.variant === 'primary' ? (
+                <a
+                  href={btn.href}
+                  class="w-full px-8 py-4 bg-brand-gold text-theme-contrast font-sans font-bold uppercase tracking-widest text-sm text-center hover:brightness-105 transition-all duration-300 rounded-sm"
+                >
+                  {btn.label}
+                </a>
+              ) : btn.variant === 'secondary' ? (
+                <a
+                  href={btn.href}
+                  class="w-full px-8 py-4 border border-theme text-theme font-sans font-bold uppercase tracking-widest text-sm text-center hover:border-brand-gold/70 hover:text-brand-gold transition-all duration-300 rounded-sm"
+                >
+                  {btn.label}
+                </a>
+              ) : (
+                <a
+                  href={btn.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full px-8 py-4 border border-theme text-theme font-sans font-bold uppercase tracking-widest text-sm text-center hover:bg-theme-surface transition-all duration-300 rounded-sm"
+                >
+                  {btn.label}
+                </a>
+              )
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Right Column: Specific Needs */}

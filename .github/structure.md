@@ -79,3 +79,12 @@ You are a Senior Frontend Architect. You must generate code that is production-r
 - **Mobile-First:** Always define mobile styles first. Use `md:`, `lg:`, `xl:` for larger screens.
 - **Clean Code:** Follow DRY (Don't Repeat Yourself) and SOLID principles. Extract repeating UI into Astro Components.
 
+## 6. Localized Page Content Method (Required for New Pages)
+- **Architecture Pattern:** Build multilingual pages using the same pattern as the Story page.
+- **Route Layer:** Keep page components in `src/pages/[lang]/...` focused on rendering only. Avoid large inline multilingual content objects inside Astro files.
+- **Content Files:** Store page copy in separate locale files under `src/content/pages/{lang}/<page>.json` for `en`, `tr`, and `fa`.
+- **Schema Layer:** Define a dedicated schema for each page type in `src/content.config.ts` and register it in the `pages` collection discriminated union.
+- **Loader Layer:** Add a typed loader in `src/lib/content.ts` (type alias + type guard + fallback loader) and consume that loader in the route component.
+- **Fallback Rules:** All page loaders must fallback to `DEFAULT_LANG` content when localized content is missing.
+- **Maintainability Rule:** Content updates should happen in locale JSON files, not by editing JSX/TS markup text directly.
+

@@ -172,6 +172,23 @@
         "title": "Temel Destek",
         "description": "Kurulum maliyetlerini karşılamak ve geçiş sürecinde sürekliliği korumak için hibe, sponsorluk veya temel destek."
       }
+    ],
+    "buttons": [
+      {
+        "label": "Başlangıcın Parçası Ol",
+        "href": "/tr/be-part-of-the-start",
+        "variant": "primary"
+      },
+      {
+        "label": "Kurumlar ve STK'lar için",
+        "href": "/tr/organization-supporter",
+        "variant": "secondary"
+      },
+      {
+        "label": "Bana Bir Kahve Al",
+        "href": "https://buymeacoffee.com/mhcraftstudio",
+        "variant": "outline"
+      }
     ]
   },
   "transparency": {

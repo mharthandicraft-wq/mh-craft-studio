@@ -4,6 +4,8 @@ import { DEFAULT_LANG, normalizeLang, type Lang } from './i18n';
 export type PageEntry = CollectionEntry<'pages'>;
 export type HomePageContent = Extract<PageEntry['data'], { pageId: 'home' }>;
 export type StoryPageContent = Extract<PageEntry['data'], { pageId: 'story' }>;
+export type IndividualSupportPageContent = Extract<PageEntry['data'], { pageId: 'individual-support' }>;
+export type OrganizationSupporterPageContent = Extract<PageEntry['data'], { pageId: 'organization-supporter' }>;
 export type PortfolioEntry = CollectionEntry<'portfolio'>;
 
 const hasLocalePrefix = (entryId: string, lang: Lang) => {
@@ -22,6 +24,20 @@ const isStoryPageEntry = (
   lang: Lang,
 ): entry is PageEntry & { data: StoryPageContent } => {
   return entry.data.pageId === 'story' && hasLocalePrefix(entry.id, lang);
+};
+
+const isIndividualSupportEntry = (
+  entry: PageEntry,
+  lang: Lang,
+): entry is PageEntry & { data: IndividualSupportPageContent } => {
+  return entry.data.pageId === 'individual-support' && hasLocalePrefix(entry.id, lang);
+};
+
+const isOrganizationSupporterEntry = (
+  entry: PageEntry,
+  lang: Lang,
+): entry is PageEntry & { data: OrganizationSupporterPageContent } => {
+  return entry.data.pageId === 'organization-supporter' && hasLocalePrefix(entry.id, lang);
 };
 
 export const getHomePageContent = async (lang: string): Promise<HomePageContent> => {
@@ -57,6 +73,44 @@ export const getStoryPageContent = async (lang: string): Promise<StoryPageConten
 
   if (!fallbackPage) {
     throw new Error('Missing fallback story page content for default locale.');
+  }
+
+  return fallbackPage.data;
+};
+
+export const getIndividualSupportPageContent = async (lang: string): Promise<IndividualSupportPageContent> => {
+  const activeLang = normalizeLang(lang);
+  const pages = await getCollection('pages');
+
+  const page = pages.find((entry) => isIndividualSupportEntry(entry, activeLang));
+
+  if (page) {
+    return page.data;
+  }
+
+  const fallbackPage = pages.find((entry) => isIndividualSupportEntry(entry, DEFAULT_LANG));
+
+  if (!fallbackPage) {
+    throw new Error('Missing fallback individual support page content for default locale.');
+  }
+
+  return fallbackPage.data;
+};
+
+export const getOrganizationSupporterPageContent = async (lang: string): Promise<OrganizationSupporterPageContent> => {
+  const activeLang = normalizeLang(lang);
+  const pages = await getCollection('pages');
+
+  const page = pages.find((entry) => isOrganizationSupporterEntry(entry, activeLang));
+
+  if (page) {
+    return page.data;
+  }
+
+  const fallbackPage = pages.find((entry) => isOrganizationSupporterEntry(entry, DEFAULT_LANG));
+
+  if (!fallbackPage) {
+    throw new Error('Missing fallback organization supporter page content for default locale.');
   }
 
   return fallbackPage.data;
