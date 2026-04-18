@@ -1,0 +1,81 @@
+{
+  "locale": "tr",
+  "pageId": "individual-support",
+  "meta": {
+    "title": "Benimle Küçük Bir Atölye Kur",
+    "description": "Küçük bir alan ve temel araçlarla geleneksel hatem zanaatini yeniden üretmek, öğretmek ve yaşatmak için ilk adım."
+  },
+  "hero": {
+    "title": "Benimle Küçük Bir Atölye Kur",
+    "subtitle": "Sadece küçük bir alan ve birkaç temel araçla geleneksel bir zanaatı üretmeye, öğretmeye ve yeniden yaşatmaya başlayabilirim.",
+    "emotionalLine": "Bu henüz tamamlanmış bir atölye değil — sadece başlangıcı.",
+    "ctaLabel": "Bu Başlangıcı İzle"
+  },
+  "whatSupportsCreates": {
+    "title": "Desteğiniz neyi mümkün kılıyor",
+    "items": [
+      { "label": "El yapımı üretime başlamak" },
+      { "label": "Geleneksel zanaatı öğretmeye başlamak" },
+      { "label": "Süreci tamamen açık şekilde paylaşmak" },
+      { "label": "Adım adım gerçek bir atölye kurmak" }
+    ]
+  },
+  "videoSection": {
+    "title": "Bu yolculuğun başlangıcını izle",
+    "playLabel": "Videoyu oynat",
+    "thumbnailAlt": "Bu yolculuğun başlangıcını anlatan video küçük resmi"
+  },
+  "startNeeds": {
+    "title": "Başlamak İçin Neye İhtiyacımız Var",
+    "subtitle": "Yeniden başlamak için sadece temel şeyler-adım adım.",
+    "items": [
+      {
+        "title": "Küçük Bir Çalışma Alanı",
+        "subtitle": "Zanaatı güvenli bir şekilde yeniden başlatabileceğimiz sade ve sessiz bir alan.",
+        "buttonLabel": "Çalışma Alanını Destekle"
+      },
+      {
+        "title": "Temel El Aletleri",
+        "subtitle": "Hassas hatem işçiliği ve günlük üretim için gerekli temel araçlar.",
+        "buttonLabel": "Aletleri Destekle"
+      },
+      {
+        "title": "Başlangıç Ekipmanları",
+        "subtitle": "Üretimi daha düzenli ve sürdürülebilir hale getirmek için gerekli temel ekipmanlar.",
+        "buttonLabel": "Atölyeyi Destekle"
+      }
+    ]
+  },
+  "transparencySection": {
+    "title": "Her şey açık şekilde paylaşılacak",
+    "items": [
+      "İlerleme raporları",
+      "Atölyeden fotoğraflar",
+      "İlk el yapımı ürünler",
+      "Adım adım gelişim süreci"
+    ]
+  },
+  "finalLine": {
+    "text": "Her atölye küçük bir yerden başlar. Bu da o an."
+  },
+  "howYouCanHelp": {
+    "title": "Bu başlangıca nasıl katkı sağlayabilirsiniz",
+    "items": [
+      {
+        "title": "Bir kahve ısmarla",
+        "subtitle": "Günlük ilerleme ve motivasyon için",
+        "buttonLabel": "Bana Bir Kahve Ismarla"
+      },
+      {
+        "title": "Alan bulmaya yardım et",
+        "subtitle": "Eğer küçük bir oda ya da çalışma alanı biliyorsanız",
+        "buttonLabel": "Benimle İletişime Geç"
+      },
+      {
+        "title": "Bu başlangıcın parçası ol",
+        "subtitle": "Küçük destekler bile bu projeyi mümkün kılar",
+        "buttonLabel": "Bu Başlangıcı Destekle"
+      }
+    ]
+  }
+}

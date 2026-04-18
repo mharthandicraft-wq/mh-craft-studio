@@ -90,6 +90,11 @@ const homePageSchema = localizedPageBaseSchema.extend({
       title: z.string(),
       description: z.string(),
     })),
+    buttons: z.array(z.object({
+      label: z.string(),
+      href: z.string(),
+      variant: z.enum(['primary', 'secondary', 'outline']),
+    })).optional(),
   }),
   transparency: z.object({
     eyebrow: z.string(),
@@ -126,6 +131,103 @@ const storyPageSchema = localizedPageBaseSchema.extend({
   })).length(3),
 });
 
+const individualSupportPageSchema = localizedPageBaseSchema.extend({
+  pageId: z.literal('individual-support'),
+  meta: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+  hero: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    emotionalLine: z.string(),
+    ctaLabel: z.string(),
+  }),
+  whatSupportsCreates: z.object({
+    title: z.string(),
+    items: z.array(z.object({
+      label: z.string(),
+    })),
+  }),
+  videoSection: z.object({
+    title: z.string(),
+    playLabel: z.string(),
+    thumbnailAlt: z.string(),
+  }),
+  startNeeds: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    items: z.array(z.object({
+      title: z.string(),
+      subtitle: z.string(),
+      buttonLabel: z.string(),
+    })).length(3),
+  }),
+  transparencySection: z.object({
+    title: z.string(),
+    items: z.array(z.string()).length(4),
+  }),
+  finalLine: z.object({
+    text: z.string(),
+  }),
+  howYouCanHelp: z.object({
+    title: z.string(),
+    items: z.array(z.object({
+      title: z.string(),
+      subtitle: z.string(),
+      buttonLabel: z.string(),
+    })).length(3),
+  }),
+});
+
+const organizationSupporterPageSchema = localizedPageBaseSchema.extend({
+  pageId: z.literal('organization-supporter'),
+  meta: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+  eyebrow: z.string(),
+  title: z.string(),
+  subtitle: z.string(),
+  shortLine: z.string(),
+  sections: z.array(z.object({
+    title: z.string(),
+    items: z.array(z.string()),
+  })),
+  proposalCtaLabel: z.string(),
+  proposalCtaHref: z.string(),
+  partnerCtaLabel: z.string(),
+  partnerCtaHref: z.string(),
+  projectOverview: z.object({
+    eyebrow: z.string(),
+    title: z.string(),
+    intro: z.string(),
+    items: z.array(z.string()),
+  }),
+  impactModel: z.object({
+    eyebrow: z.string(),
+    title: z.string(),
+    items: z.array(z.string()),
+  }),
+  supportOptions: z.object({
+    eyebrow: z.string(),
+    title: z.string(),
+    items: z.array(z.string()),
+  }),
+  transparencyModel: z.object({
+    eyebrow: z.string(),
+    title: z.string(),
+    items: z.array(z.string()),
+  }),
+  finalCta: z.object({
+    text: z.string(),
+    primaryLabel: z.string(),
+    primaryHref: z.string(),
+    secondaryLabel: z.string(),
+    secondaryHref: z.string(),
+  }),
+});
+
 const portfolio = defineCollection({
   
   loader: glob({ pattern: "**/*.md", base: "./src/content/portfolio" }),
@@ -148,7 +250,12 @@ const portfolio = defineCollection({
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./src/content/pages" }),
-  schema: z.discriminatedUnion('pageId', [homePageSchema, storyPageSchema]),
+  schema: z.discriminatedUnion('pageId', [
+    homePageSchema,
+    storyPageSchema,
+    individualSupportPageSchema,
+    organizationSupporterPageSchema,
+  ]),
 });
 
 export const collections = { portfolio, pages };

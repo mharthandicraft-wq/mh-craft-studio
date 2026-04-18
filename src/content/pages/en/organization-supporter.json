@@ -1,0 +1,81 @@
+{
+  "locale": "en",
+  "pageId": "organization-supporter",
+  "meta": {
+    "title": "Organization Supporter",
+    "description": "Partner with MH Craft Studio as an organization supporter to help preserve traditional Khatam-kari through structured collaboration."
+  },
+  "eyebrow": "Partnership Path",
+  "title": "A Craft Preservation & Empowerment Project Starting From Zero",
+  "subtitle": "This project aims to revive traditional Khatam craftsmanship while training and empowering refugees and vulnerable individuals through a small, structured, and transparent workshop model.",
+  "shortLine": "We are at the beginning stage - building from the ground up, together with those who need a new path.",
+  "sections": [
+    {
+      "title": "Where Your Support Can Help",
+      "items": [
+        "Securing a stable workshop space for consistent production.",
+        "Access to quality tools and raw materials for traditional techniques.",
+        "Program support for training and skill transfer in a structured format."
+      ]
+    },
+    {
+      "title": "How We Collaborate",
+      "items": [
+        "Clear scope and objectives aligned with your mission.",
+        "Periodic progress updates and visual documentation.",
+        "Transparent communication around timelines and outcomes."
+      ]
+    }
+  ],
+  "proposalCtaLabel": "Download Full Proposal (PDF)",
+  "proposalCtaHref": "mailto:mhcraftstudio@gmail.com?subject=Request%20for%20Full%20Proposal%20PDF",
+  "partnerCtaLabel": "Contact for Partnership",
+  "partnerCtaHref": "mailto:mhcraftstudio@gmail.com?subject=Partnership%20Inquiry",
+  "projectOverview": {
+    "eyebrow": "Project Overview",
+    "title": "What this project is",
+    "intro": "This is a small-scale craft initiative focused on:",
+    "items": [
+      "Preserving endangered traditional craftsmanship",
+      "Creating learning opportunities for displaced artisans",
+      "Building a sustainable micro-workshop model in Türkiye"
+    ]
+  },
+  "impactModel": {
+    "eyebrow": "Impact Model",
+    "title": "What happens after the first step",
+    "items": [
+      "Continuous craft production begins",
+      "Training sessions for learners",
+      "Documentation and educational content",
+      "Long-term sustainability through handmade sales"
+    ]
+  },
+  "supportOptions": {
+    "eyebrow": "Support Options",
+    "title": "How organizations can support",
+    "items": [
+      "Providing a small workshop space",
+      "Supporting initial setup costs",
+      "Long-term partnership for training programs",
+      "Cultural preservation collaboration"
+    ]
+  },
+  "transparencyModel": {
+    "eyebrow": "Transparency Model",
+    "title": "Commitment to transparency",
+    "items": [
+      "Open progress documentation",
+      "Visual reports of work",
+      "Clear usage of resources",
+      "Public updates on development"
+    ]
+  },
+  "finalCta": {
+    "text": "We are not requesting funding for a concept - we are asking for support to begin a real working space.",
+    "primaryLabel": "Start Collaboration",
+    "primaryHref": "mailto:mhcraftstudio@gmail.com?subject=Start%20Collaboration",
+    "secondaryLabel": "Request Meeting",
+    "secondaryHref": "mailto:mhcraftstudio@gmail.com?subject=Request%20Meeting"
+  }
+}

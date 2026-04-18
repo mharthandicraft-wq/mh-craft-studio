@@ -1,0 +1,81 @@
+{
+  "locale": "en",
+  "pageId": "individual-support",
+  "meta": {
+    "title": "Join Us In Building This Small Workshop",
+    "description": "A practical first step to restart traditional Khatam craft through a small workshop space, essential tools, and steady hands."
+  },
+  "hero": {
+    "title": "Join Us In Building This Small Workshop",
+    "subtitle": "I can begin creating, teaching, and sharing traditional craftsmanship with just a small space and a few basic tools.",
+    "emotionalLine": "This is not a finished workshop yet — it’s the beginning of one.",
+    "ctaLabel": "See How This Starts"
+  },
+  "whatSupportsCreates": {
+    "title": "What your support helps create",
+    "items": [
+      { "label": "Start handmade production" },
+      { "label": "Begin teaching traditional craft" },
+      { "label": "Share the full process openly" },
+      { "label": "Build a real workshop step by step" }
+    ]
+  },
+  "videoSection": {
+    "title": "Watch the beginning of this journey",
+    "playLabel": "Play video",
+    "thumbnailAlt": "Video thumbnail for the beginning of this journey"
+  },
+  "startNeeds": {
+    "title": "What We Need to Begin",
+    "subtitle": "Just the basics to start again-step by step.",
+    "items": [
+      {
+        "title": "Small Working Space",
+        "subtitle": "A simple, quiet place where we can safely restart the craft and set up basic production.",
+        "buttonLabel": "Support Workspace"
+      },
+      {
+        "title": "Basic Hand Tools",
+        "subtitle": "Essential tools needed for precise Khatam craftsmanship and daily production work.",
+        "buttonLabel": "Fund Tools"
+      },
+      {
+        "title": "Starter Equipment",
+        "subtitle": "Minimal equipment to make production stable, organized, and consistent.",
+        "buttonLabel": "Help Equip the Workshop"
+      }
+    ]
+  },
+  "transparencySection": {
+    "title": "Everything will be shared openly",
+    "items": [
+      "Progress updates",
+      "Photos from the workspace",
+      "First handmade pieces",
+      "Step-by-step growth"
+    ]
+  },
+  "finalLine": {
+    "text": "Every workshop starts somewhere small. This is that moment"
+  },
+  "howYouCanHelp": {
+    "title": "Ways to support this beginning",
+    "items": [
+      {
+        "title": "Buy a Coffee",
+        "subtitle": "Support daily progress and energy",
+        "buttonLabel": "Buy Me a Coffee"
+      },
+      {
+        "title": "Help find a space",
+        "subtitle": "If you know a small room or workspace",
+        "buttonLabel": "Contact Me"
+      },
+      {
+        "title": "Be part of the beginning",
+        "subtitle": "Even a small support helps this project start",
+        "buttonLabel": "Support This Start"
+      }
+    ]
+  }
+}

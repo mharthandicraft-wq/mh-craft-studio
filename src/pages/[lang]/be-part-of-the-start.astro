@@ -1,0 +1,274 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getIndividualSupportPageContent } from '../../lib/content';
+import { SUPPORTED_LANGS, normalizeLang } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const activeLang = normalizeLang(Astro.params.lang);
+const content = await getIndividualSupportPageContent(activeLang);
+---
+
+<MainLayout
+  title={content.meta.title}
+  description={content.meta.description}
+  lang={activeLang}
+>
+  <section class="relative overflow-hidden pb-20 pt-24 sm:pb-24 sm:pt-32 lg:pb-28 lg:pt-40">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -top-40 start-0 h-[36rem] w-[36rem] bg-[radial-gradient(circle,rgba(197,160,89,0.18)_0%,transparent_65%)] blur-3xl"></div>
+      <div class="absolute bottom-0 end-0 h-80 w-80 bg-[radial-gradient(circle,rgba(197,160,89,0.12)_0%,transparent_65%)] blur-2xl"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+        <figure class="overflow-hidden rounded-sm  bg-theme-panel lg:col-span-5">
+          <img
+            src="/images/invidual-support-page/persian-khatam-marquetry-handmade-candle-holder-artisan.webp"
+            alt="Handmade Persian Khatam marquetry candle holder with geometric star inlay patterns"
+            loading="lazy"
+            class="aspect-[4/5] w-full object-cover"
+          />
+        </figure>
+
+        <div class="lg:col-span-7">
+          <h1 class="text-balance font-serif text-5xl leading-[1.08] text-theme sm:text-6xl lg:text-7xl xl:text-[3.4rem]">
+            {content.hero.title}
+          </h1>
+
+          <div class="mt-10 h-px w-24 bg-brand-gold/55"></div>
+
+          <p class="mt-8 text-start font-sans text-lg leading-relaxed text-theme-soft sm:text-xl">
+            {content.hero.subtitle}
+          </p>
+
+          <p class="mt-8 inline-flex bg-theme-panel py-4 text-start font-serif text-xl leading-relaxed text-theme sm:text-2xl">
+            {content.hero.emotionalLine}
+          </p>
+
+          <div class="mt-10">
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              class="inline-flex w-full items-center justify-center rounded-sm bg-brand-gold px-6 py-4 text-center font-sans text-sm font-semibold uppercase tracking-[0.16em] text-[#111111] opacity-80 transition sm:w-auto"
+            >
+              {content.hero.ctaLabel}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ─── What Your Support Helps Create ─── */}
+  <section class="py-16 sm:py-20 lg:py-24 bg-theme-panel">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-balance text-center font-serif text-3xl leading-tight text-theme sm:text-4xl lg:text-5xl">
+        {content.whatSupportsCreates.title}
+      </h2>
+
+      <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {content.whatSupportsCreates.items.map((item, index) => {
+          const icons = [
+            /* hands / handmade production */
+            `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7" aria-hidden="true"><path d="M18 11V9a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/><path d="M14 13h2a2 2 0 0 1 2 2v1a2 2 0 0 0 2 2 2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H6"/><circle cx="6" cy="17" r="3"/><circle cx="15" cy="17" r="3"/></svg>`,
+            /* book / teaching */
+            `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+            /* share / process */
+            `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>`,
+            /* layers / workshop */
+            `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+          ];
+
+          return (
+            <div class="group flex flex-col gap-5 rounded-sm border border-theme bg-theme-base p-7 transition-all duration-300 hover:border-brand-gold/40 hover:bg-theme-surface">
+              <span class="text-brand-gold/60 transition-colors duration-300 group-hover:text-brand-gold" set:html={icons[index]} />
+              <p class="font-sans text-base font-medium leading-snug text-theme">
+                {item.label}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 sm:pb-24 lg:pb-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-balance text-center font-serif text-3xl leading-tight text-theme sm:text-4xl lg:text-5xl">
+        {content.videoSection.title}
+      </h2>
+
+      <div class="mt-10 overflow-hidden rounded-sm border border-theme-strong bg-theme-panel">
+        <div id="support-journey-preview" class="relative aspect-video w-full">
+          <button
+            type="button"
+            data-youtube-target="support-journey-video"
+            aria-label={`${content.videoSection.playLabel}: ${content.videoSection.title}`}
+            class="group relative block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-theme-base"
+          >
+            <img
+              src="https://i.ytimg.com/vi/xO2RcQGsTeo/hqdefault.jpg"
+              alt={content.videoSection.thumbnailAlt}
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/20" aria-hidden="true"></span>
+            <span class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+              <span class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-brand-gold text-[#111111] shadow-lg transition-transform duration-300 group-hover:scale-105 sm:h-20 sm:w-20">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="ms-1 h-7 w-7 sm:h-9 sm:w-9" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div id="support-journey-video" class="hidden aspect-video w-full">
+          <iframe
+            class="h-full w-full"
+            title={content.videoSection.title}
+            data-src="https://www.youtube-nocookie.com/embed/xO2RcQGsTeo?autoplay=1&rel=0"
+            src=""
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative pb-20 sm:pb-24 lg:pb-28">
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(197,160,89,0.07)_0%,transparent_100%)]" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-sm  bg-theme-panel p-6 sm:p-8 lg:p-10">
+        <h2 class="text-balance text-center font-serif text-3xl leading-tight text-theme sm:text-4xl lg:text-5xl">
+          {content.startNeeds.title}
+        </h2>
+
+        <p class="mx-auto mt-5 max-w-2xl text-balance text-center font-sans text-base leading-relaxed text-theme-soft sm:text-lg">
+          {content.startNeeds.subtitle}
+        </p>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {content.startNeeds.items.map((item, index) => (
+            <article class="group relative overflow-hidden rounded-sm border border-theme bg-theme-base p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/35 hover:bg-theme-surface sm:p-7">
+              <span class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+
+              <h3 class="mt-4 text-balance font-serif text-2xl leading-tight text-brand-gold">
+                {item.title}
+              </h3>
+
+              <p class="mt-4 min-h-[5rem] text-start font-sans text-base leading-relaxed text-theme-soft">
+                {item.subtitle}
+              </p>
+
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                class="mt-7 inline-flex w-full items-center justify-center rounded-sm border border-brand-gold/50 bg-transparent px-5 py-3 text-center font-sans text-xs font-semibold uppercase tracking-[0.14em] text-theme transition duration-300 group-hover:border-brand-gold group-hover:bg-brand-gold group-hover:text-[#111111]"
+              >
+                {item.buttonLabel}
+              </button>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 sm:pb-24 lg:pb-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-sm  bg-theme-panel p-6 sm:p-8 lg:p-10">
+        <h2 class="text-balance text-center font-serif text-3xl leading-tight text-theme sm:text-4xl lg:text-5xl">
+          {content.transparencySection.title}
+        </h2>
+
+        <ul class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2" aria-label={content.transparencySection.title}>
+          {content.transparencySection.items.map((item) => (
+            <li class="flex items-start gap-3 rounded-sm border border-theme bg-theme-base px-4 py-4 sm:px-5">
+              <span class="mt-2 inline-block h-2 w-2 rounded-full bg-brand-gold" aria-hidden="true"></span>
+              <span class="text-start font-sans text-base leading-relaxed text-theme-soft">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 sm:pb-24 lg:pb-28">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <blockquote class="relative overflow-hidden rounded-sm border border-brand-gold/40 bg-theme-panel px-6 py-10 text-center sm:px-10 sm:py-12">
+        <span class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-gold/70 to-transparent" aria-hidden="true"></span>
+        <p class="text-balance font-serif text-3xl leading-tight text-brand-gold sm:text-4xl lg:text-5xl">
+          {content.finalLine.text}
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="pb-20 sm:pb-24 lg:pb-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-balance text-center font-serif text-3xl leading-tight text-theme sm:text-4xl lg:text-5xl">
+        {content.howYouCanHelp.title}
+      </h2>
+
+      <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
+        {content.howYouCanHelp.items.map((item) => (
+          <article class="group relative overflow-hidden rounded-sm border border-theme bg-theme-base p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/35 hover:bg-theme-surface sm:p-7">
+            <span class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+
+            <h3 class="text-balance font-serif text-2xl leading-tight text-brand-gold">
+              {item.title}
+            </h3>
+
+            <p class="mt-4 min-h-[3.5rem] text-start font-sans text-base leading-relaxed text-theme-soft">
+              {item.subtitle}
+            </p>
+
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              class="mt-7 inline-flex w-full items-center justify-center rounded-sm border border-brand-gold/50 bg-transparent px-5 py-3 text-center font-sans text-xs font-semibold uppercase tracking-[0.14em] text-theme transition duration-300 group-hover:border-brand-gold group-hover:bg-brand-gold group-hover:text-[#111111]"
+            >
+              {item.buttonLabel}
+            </button>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const youtubeTrigger = document.querySelector('[data-youtube-target="support-journey-video"]');
+
+    if (youtubeTrigger) {
+      youtubeTrigger.addEventListener('click', () => {
+        const preview = document.getElementById('support-journey-preview');
+        const videoContainer = document.getElementById('support-journey-video');
+        const iframe = videoContainer?.querySelector('iframe');
+
+        if (!videoContainer || !iframe) {
+          return;
+        }
+
+        if (!iframe.getAttribute('src')) {
+          iframe.setAttribute('src', iframe.getAttribute('data-src') ?? '');
+        }
+
+        preview?.classList.add('hidden');
+        videoContainer.classList.remove('hidden');
+      });
+    }
+  </script>
+</MainLayout>

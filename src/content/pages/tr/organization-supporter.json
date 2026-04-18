@@ -1,0 +1,81 @@
+{
+  "locale": "tr",
+  "pageId": "organization-supporter",
+  "meta": {
+    "title": "Kurumsal Destek",
+    "description": "MH Craft Studio ile kurumsal destek ve iş birliği olanaklarını keşfedin; geleneksel hatem sanatını birlikte sürdürelim."
+  },
+  "eyebrow": "İş Birliği Yolu",
+  "title": "Sıfırdan Başlayan Bir Sanat Koruma ve Güçlendirme Projesi",
+  "subtitle": "Bu proje, geleneksel hatem sanatını yeniden canlandırmayı hedeflerken, aynı zamanda mültecileri ve dezavantajlı bireyleri küçük, planlı ve şeffaf bir atölye modeliyle eğitmeyi ve güçlendirmeyi amaçlamaktadır.",
+  "shortLine": "Yolun başındayız - sıfırdan başlıyor ve yeni bir yola ihtiyacı olanlarla birlikte ilerliyoruz.",
+  "sections": [
+    {
+      "title": "Desteğinizin Katkı Sunabileceği Alanlar",
+      "items": [
+        "Sürekli üretim için istikrarlı bir atölye alanı oluşturmak.",
+        "Geleneksel teknikler için nitelikli araç ve ham maddelere erişim.",
+        "Bilgi aktarımı ve eğitim odaklı yapılandırılmış program desteği."
+      ]
+    },
+    {
+      "title": "Nasıl Çalışıyoruz",
+      "items": [
+        "Misyonunuza uygun net kapsam ve hedefler.",
+        "Düzenli ilerleme güncellemeleri ve görsel dokümantasyon.",
+        "Takvim ve çıktılar konusunda şeffaf iletişim."
+      ]
+    }
+  ],
+  "proposalCtaLabel": "Tam Projeyi İndir (PDF)",
+  "proposalCtaHref": "mailto:mhcraftstudio@gmail.com?subject=Tam%20Proje%20PDF%20Talebi",
+  "partnerCtaLabel": "İş Birliği İçin İletişime Geç",
+  "partnerCtaHref": "mailto:mhcraftstudio@gmail.com?subject=Is%20Birligi%20Talebi",
+  "projectOverview": {
+    "eyebrow": "Proje Geneli",
+    "title": "Bu proje nedir",
+    "intro": "Bu, geleneksel zanaatları yeniden canlandırmaya odaklanan küçük ölçekli bir girişimdir:",
+    "items": [
+      "Yok olma tehlikesi altındaki el sanatlarını korumak",
+      "Dezavantajlı bireylere ve mültecilere öğrenme fırsatı sunmak",
+      "Türkiye'de sürdürülebilir bir mikro-atölye modeli kurmak"
+    ]
+  },
+  "impactModel": {
+    "eyebrow": "Etki Modeli",
+    "title": "Başlangıçtan sonra ne olacak",
+    "items": [
+      "Atölye kurulduktan sonra sürekli el yapımı üretim",
+      "Eğitim programları",
+      "Belgeleme ve eğitim içerikleri",
+      "El yapımı satışlarla sürdürülebilirlik"
+    ]
+  },
+  "supportOptions": {
+    "eyebrow": "Destek Yolları",
+    "title": "Kuruluşlar nasıl destek olabilir",
+    "items": [
+      "Küçük bir atölye alanı sağlamak",
+      "Başlangıç kurulum maliyetlerini desteklemek",
+      "Eğitim programları için uzun vadeli iş birliği",
+      "Kültürel miras koruma ortaklığı"
+    ]
+  },
+  "transparencyModel": {
+    "eyebrow": "Şeffaflık Modeli",
+    "title": "Şeffaflık taahhüdü",
+    "items": [
+      "Sürecin düzenli olarak belgelenmesi",
+      "Görsel ilerleme raporları",
+      "Kaynak kullanımında açıklık",
+      "Kamuya açık güncellemeler"
+    ]
+  },
+  "finalCta": {
+    "text": "Biz bir fikir için destek istemiyoruz - gerçek bir çalışma alanı kurmak için destek arıyoruz.",
+    "primaryLabel": "İş Birliğine Başla",
+    "primaryHref": "mailto:mhcraftstudio@gmail.com?subject=%C4%B0%C5%9F%20Birli%C4%9Fine%20Ba%C5%9Fla",
+    "secondaryLabel": "Görüşme Talep Et",
+    "secondaryHref": "mailto:mhcraftstudio@gmail.com?subject=G%C3%B6r%C3%BC%C5%9Fme%20Talebi"
+  }
+}
