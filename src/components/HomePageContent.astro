@@ -2,6 +2,7 @@
 import HeroScroll from './react/HeroScroll.tsx';
 import Pillars from './Pillars.astro';
 import Vision from './Vision.astro';
+import CraftPreservationSpotlight from './CraftPreservationSpotlight.astro';
 import Phases from './Phases.astro';
 import Experience from './Experience.astro';
 import PortfolioHover from './PortfolioHover.tsx';
@@ -27,6 +28,7 @@ const { lang, content, projects } = Astro.props;
 <div id="mission">
   <Pillars content={content.pillars} />
   <Vision content={content.vision} />
+  <CraftPreservationSpotlight lang={lang} content={content.craftPreservationSpotlight} />
 </div>
 
 <div id="milestones">

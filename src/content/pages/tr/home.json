@@ -8,7 +8,7 @@
     },
     "headline": "Üreten Eller.",
     "highlight": "Yaşayan Bir Zanaat.",
-    "summary": "İzmit'te faaliyet gösteren aile odaklı geleneksel bir zanaat atölyesi olarak, hatem sanatını yeniden canlandırmak ve kırılgan topluluklar için sürdürülebilir eğitim fırsatları oluşturmak için çalışıyoruz.",
+    "summary": "Türkiye’de mültecilere eğitim vermek ve Hatem sanatını korumak amacıyla geleneksel bir el sanatları atölyesini yeniden kuruyoruz.",
     "story": [
       "Biz, 12 yıl önce mülteci olarak Türkiye'ye gelen ve İzmit'e yerleşen beş kişilik bir aileyiz.",
       "Yanımızda hiçbir kaynak getirmedik; yalnızca becerilerimizi, emeğe olan inancımızı ve yüzyıllara dayanan bir geleneğe kök salmış hatem sanatını getirdik.",
@@ -44,6 +44,11 @@
       "Her yıl 5 zanaatkar yetiştirmek",
       "Sürdürülebilir bir üretim sistemi kurmak"
     ]
+  },
+  "craftPreservationSpotlight": {
+    "heading": "Seri üretimin her şeyi ele geçirdiği bir dünyada, el emeği sanatlar yavaş yavaş yok oluyor. Bu atölye, bu geleneği yaşatmak için bir adım.",
+    "videoId": "-ITgeSo7FGQ",
+    "iframeTitle": "Hatem atölyesi sürecini gösteren kısa video"
   },
   "phases": {
     "title": "Bu Süreç Nasıl Büyür",

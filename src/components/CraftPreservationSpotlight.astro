@@ -1,0 +1,119 @@
+---
+interface Props {
+  lang?: string;
+  content?: {
+    heading: string;
+    videoId: string;
+    iframeTitle: string;
+  };
+}
+
+const { content, lang = 'en' } = Astro.props;
+const fallbackHeadingByLang: Record<string, string> = {
+  en: 'In a world of mass production, handmade art is slowly fading. This workshop is our way of keeping that tradition alive.',
+  tr: 'Seri uretimin her seyi ele gecirdigi bir dunyada, el emegi sanatlar yavas yavas yok oluyor. Bu atolye, bu gelenegi yasatmak icin bir adim.',
+  fa: 'در دنیایی که تولید انبوه همه‌چیز را فرا گرفته، هنر دست‌ساز آرام‌آرام در حال فراموشی است. این کارگاه، تلاش ما برای زنده نگه داشتن این اصالت است.',
+};
+const buttonLabelByLang: Record<string, string> = {
+  en: 'Help Keep It Alive',
+  tr: 'Yasatmaya Destek Ol',
+  fa: 'کمک کن زنده بماند',
+};
+const safeContent = {
+  heading: content?.heading ?? fallbackHeadingByLang[lang] ?? fallbackHeadingByLang.en,
+  videoId: content?.videoId ?? '-ITgeSo7FGQ',
+  iframeTitle: content?.iframeTitle ?? 'Khatam workshop short video',
+};
+const ctaLabel = buttonLabelByLang[lang] ?? buttonLabelByLang.en;
+const ctaHref = `/${lang}/be-part-of-the-start`;
+const iframeId = `craft-preservation-video-${safeContent.videoId}`;
+const embedUrl = `https://www.youtube.com/embed/${safeContent.videoId}?autoplay=1&mute=1&loop=1&playlist=${safeContent.videoId}&playsinline=1&rel=0&modestbranding=1&enablejsapi=1`;
+---
+
+<section class="w-full py-10 md:py-24 px-6 md:px-12 bg-theme-base transition-colors duration-500" aria-label="Craft preservation spotlight">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="w-full max-w-[468px] mx-auto lg:me-auto lg:ms-0 rounded-xl overflow-hidden border border-theme-soft bg-theme-surface shadow-sm">
+      <div class="aspect-[9/16] w-full">
+        <iframe
+          id={iframeId}
+          src={embedUrl}
+          title={safeContent.iframeTitle}
+          class="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-serif text-4xl md:text-6xl leading-tight text-theme text-start">
+        {safeContent.heading}
+      </h2>
+      <a
+        href={ctaHref}
+        class="inline-flex items-center justify-center mt-8 px-6 py-3 bg-brand-gold text-theme-contrast font-sans font-bold uppercase tracking-[0.12em] text-xs md:text-sm rounded-sm transition-all duration-300 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-theme-base"
+      >
+        {ctaLabel}
+      </a>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ iframeId }}>
+  const targetRate = 0.5;
+
+  const applyPlaybackRate = (player) => {
+    try {
+      const supportedRates = player.getAvailablePlaybackRates?.() ?? [];
+      const nextRate = supportedRates.includes(targetRate)
+        ? targetRate
+        : supportedRates.find((rate) => rate < 1) ?? 1;
+      if (nextRate !== undefined) {
+        player.setPlaybackRate(nextRate);
+      }
+    } catch {
+      // Some YouTube embeds do not expose playback-rate controls.
+    }
+  };
+
+  const setupPlayer = () => {
+    const iframe = document.getElementById(iframeId);
+    if (!iframe || !window.YT?.Player) {
+      return;
+    }
+
+    new window.YT.Player(iframeId, {
+      events: {
+        onReady: (event) => {
+          applyPlaybackRate(event.target);
+          event.target.playVideo();
+        },
+        onStateChange: (event) => {
+          if (event.data === window.YT.PlayerState.PLAYING) {
+            applyPlaybackRate(event.target);
+          }
+        },
+      },
+    });
+  };
+
+  if (window.YT?.Player) {
+    setupPlayer();
+  } else {
+    const existingCallback = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      if (typeof existingCallback === 'function') {
+        existingCallback();
+      }
+      setupPlayer();
+    };
+
+    if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(script);
+    }
+  }
+</script>

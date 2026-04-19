@@ -32,6 +32,11 @@ const homePageSchema = localizedPageBaseSchema.extend({
     paragraphs: z.array(z.string()),
     goals: z.array(z.string()),
   }),
+  craftPreservationSpotlight: z.object({
+    heading: z.string(),
+    videoId: z.string(),
+    iframeTitle: z.string(),
+  }),
   phases: z.object({
     title: z.string(),
     items: z.array(z.object({

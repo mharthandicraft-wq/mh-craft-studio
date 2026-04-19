@@ -8,7 +8,7 @@
     },
     "headline": "Hands That Create.",
     "highlight": "A Craft That Survives.",
-    "summary": "A family-led traditional craft workshop in İzmit, working to revive the art of Khatam and create sustainable training opportunities for vulnerable communities.",
+    "summary": "We are rebuilding a traditional craft workshop in Turkey to train refugees and preserve Khatam art.",
     "story": [
       "We are a family of five who arrived in Türkiye as refugees 12 years ago and settled in İzmit.",
       "We brought no resources with us — only our skills, our faith in work, and a traditional craft rooted in centuries of history: Khatam art.",
@@ -44,6 +44,11 @@
       "Train 5 artisans per year",
       "Build a sustainable production system"
     ]
+  },
+  "craftPreservationSpotlight": {
+    "heading": "In a world of mass production, handmade art is slowly fading. This workshop is our way of keeping that tradition alive.",
+    "videoId": "-ITgeSo7FGQ",
+    "iframeTitle": "Khatam workshop process short video"
   },
   "phases": {
     "title": "How This Would Grow",

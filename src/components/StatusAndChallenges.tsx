@@ -64,11 +64,11 @@ const StatusAndChallenges = ({ content }: { content: StatusContent }) => {
         className="absolute inset-0 z-0 hidden pointer-events-none lg:block"
         style={{
           backgroundColor: "var(--color-spotlight-base)",
-          backgroundImage: "url('/images/home/backgammon.webp')",
+          backgroundImage: "url('/images/home/artisan-Decorative-tray.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          WebkitMaskImage: `radial-gradient(circle 350px at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 100%)`,
-          maskImage: `radial-gradient(circle 350px at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 100%)`,
+          WebkitMaskImage: `radial-gradient(circle 250px at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 100%)`,
+          maskImage: `radial-gradient(circle 250px at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 100%)`,
         }}
       ></div>
 
