@@ -1,26 +1,29 @@
 ---
-locale: "fa"
+locale: "en"
 translationKey: "royal-jewelry-box"
-title: "جعبه جواهر شش‌ضلعی سلطنتی"
-description: "قطعه‌ای شاخص با هندسه فشرده و سنتی خاتم که برای نمایش، هدیه و حفظ یک هنر ظریف ساخته شده است."
-mainImage: "/images/portfolio/Jewelry-Box/handmade-khatam-jewelry-box.webp"
-mainImageAlt: "جعبه جواهر دست‌ساز شش‌ضلعی با خاتم‌کاری ظریف"
+title: "Royal Hexagon Jewelry Box"
+description: "A statement piece featuring dense traditional Khatam geometry, made for display, gifting, and long-term preservation of fine craft."
+mainImage: "/images/portfolio/jewelry box/handmade-khatam-jewelry-box.webp"
+mainImageAlt: "Handmade royal hexagon jewelry box with detailed Khatam inlay"
 gallery:
-  - src: "/images/portfolio/Jewelry-Box/DSCF6530.webp"
-    alt: "نمای نزدیک از سطح جعبه با جزئیات نقش خاتم"
-time: "۱۲۰ ساعت"
-category: "جعبه‌های لوکس"
+  - src: "/images/portfolio/jewelry box/DSCF7526.webp"
+    alt: "Close-up of the jewelry box surface showing intricate Khatam pattern work"
+  - src: "/images/portfolio/jewelry box/DSCF7510.webp"
+    alt: "Close-up of the jewelry box surface showing intricate Khatam pattern work"
+  
+time: "120 Hours"
+category: "Luxury Boxes"
 sku: "MH-JB-001"
 availability: "made-to-order"
 materials:
-  - "چوب"
-  - "برنج"
-  - "استخوان"
+  - "wood"
+  - "brass"
+  - "bone"
 tags:
-  - "جعبه جواهر"
-  - "خاتم"
-  - "دست‌ساز"
+  - "jewelry box"
+  - "khatam"
+  - "handcrafted"
 ---
-این جعبه جواهر بازتابی از دقت و صبری است که هنر سنتی خاتم را تعریف می‌کند. هر سطح نقش‌دار آن از طریق تکرار هندسه، برش دقیق و پرداخت آرام و سنجیده شکل می‌گیرد.
+This jewelry box reflects the kind of precision and patience that defines traditional Khatam work. Each patterned surface is built through repeated geometric assembly, careful cutting, and steady finishing.
 
-این اثر فقط یک شیء کاربردی نیست؛ بلکه راهی برای حفظ یک زبان بصری است که ادامه دادن آن در تولید روزمره هر روز دشوارتر می‌شود.
+The piece is intended not only as a functional object, but as a way to preserve a visual language that is becoming harder to sustain in everyday production.

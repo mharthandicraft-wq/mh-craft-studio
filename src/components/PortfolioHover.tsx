@@ -41,13 +41,18 @@ const PortfolioHover = ({ lang, content, projects }: { lang: string; content: Pr
           </p>
         </div>
         {visibleProjects.map((project) => (
-          <div key={project.data.translationKey} className="flex flex-col gap-4 border theme-card rounded-lg p-5">
+          <a
+            key={project.data.translationKey}
+            href={`/${activeLang}/portfolio/${project.data.translationKey}`}
+            className="flex flex-col gap-4 border theme-card rounded-lg p-5 transition-all duration-200 hover:border-brand-gold active:scale-[0.99] active:translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+            aria-label={project.data.title}
+          >
             <img src={project.data.mainImage} alt={project.data.mainImageAlt} className="w-full h-auto aspect-square object-cover object-center rounded-lg" />
             <div className="text-center pt-2">
               <h3 className="font-serif text-2xl text-theme mb-1 leading-tight">{project.data.title}</h3>
               <span className="font-sans text-brand-gold text-xs uppercase tracking-widest font-semibold">{project.data.category}</span>
             </div>
-          </div>
+          </a>
         ))}
         <a href={`/${activeLang}/portfolio`} className="mt-8 border border-brand-gold text-brand-gold px-8 py-5 uppercase tracking-[0.2em] text-sm hover:bg-brand-gold hover:text-theme-contrast transition-colors w-full text-center">
           {t.ui.viewFullPortfolio}
@@ -90,10 +95,13 @@ const PortfolioHover = ({ lang, content, projects }: { lang: string; content: Pr
           <div className="col-span-5 flex flex-col gap-12 lg:pl-10">
             <div className="flex flex-col border-t border-theme">
               {visibleProjects.map((project, index) => (
-                <div 
+                <a
                   key={project.data.translationKey}
+                  href={`/${activeLang}/portfolio/${project.data.translationKey}`}
                   onMouseEnter={() => setActiveIndex(index)}
-                  className="py-7 border-b border-theme cursor-pointer group flex justify-between items-center"
+                  onFocus={() => setActiveIndex(index)}
+                  className="py-7 border-b border-theme cursor-pointer group flex justify-between items-center transition-all duration-200 hover:bg-theme-surface active:scale-[0.995] active:translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                  aria-label={project.data.title}
                 >
                   <h3 className={`font-serif text-3xl transition-colors duration-500 leading-tight ${activeIndex === index ? 'text-theme' : 'text-[var(--color-foreground-dim)] group-hover:text-[var(--color-foreground-faint)]'}`}>
                     {project.data.title}
@@ -101,7 +109,7 @@ const PortfolioHover = ({ lang, content, projects }: { lang: string; content: Pr
                   <span className={`font-sans text-sm font-semibold tracking-widest text-brand-gold transition-opacity duration-500 ${activeIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                     {project.data.category}
                   </span>
-                </div>
+                </a>
               ))}
             </div>
 

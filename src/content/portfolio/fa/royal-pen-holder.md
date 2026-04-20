@@ -1,26 +1,37 @@
 ---
-locale: "fa"
+locale: "en"
 translationKey: "royal-pen-holder"
-title: "جا قلمی سلطنتی"
-description: "قطعه‌ای رومیزی و دست‌ساز که نظم بصری هنر خاتم را به یک شیء روزمره منتقل می‌کند."
-mainImage: "/images/portfolio/Pen-Holder/handmade-khatam-pen-holder.webp"
-mainImageAlt: "جا قلمی خاتم‌کاری دست‌ساز با جزئیات هندسی"
+title: "Royal Pen Holder"
+description: "A compact handcrafted desk piece that carries the visual discipline of Khatam into an everyday object."
+mainImage: "/images/portfolio/Pen Holder/handmade-khatam-pen-holder.webp"
+mainImageAlt: "Handmade Khatam pen holder with geometric marquetry details"
 gallery:
-  - src: "/images/portfolio/Pen-Holder/royal-pen-holder-detail.webp"
-    alt: "نمای نزدیک از جا قلمی با لایه‌های ظریف هندسی"
-time: "۱۰۰ ساعت"
-category: "جا قلمی لوکس"
+  - src: "/images/portfolio/Pen Holder/DSCF6534.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6537.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6536.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6553.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6527.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6552.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  
+time: "100 Hours"
+category: "Luxury Pen Holders"
 sku: "MH-PH-001"
 availability: "made-to-order"
 materials:
-  - "چوب"
-  - "برنج"
-  - "استخوان"
+  - "wood"
+  - "brass"
+  - "bone"
 tags:
-  - "جا قلمی"
-  - "شیء رومیزی"
-  - "خاتم"
+  - "pen holder"
+  - "desk object"
+  - "khatam"
 ---
-این جا قلمی، طراحی سنتی خاتم را به فرمی کوچک‌تر و کاربردی منتقل می‌کند. این اثر برای استفاده روزمره طراحی شده است، اما همچنان دقت، ریتم و فشردگی بصری آثار کلاسیک کارگاهی را در خود نگه می‌دارد.
+This pen holder brings traditional Khatam design into a smaller, practical form. It is designed for daily use while still carrying the precision, rhythm, and visual density associated with classical workshop pieces.
 
-همانند آثار بزرگ‌تر، ارزش این شیء فقط در ظاهر نهایی آن نیست؛ بلکه در کار دست منظم و صبورانه‌ای است که برای تکمیل آن لازم است.
+As with the larger works, the value of the object lies not only in the final appearance, but also in the disciplined handwork required to complete it.

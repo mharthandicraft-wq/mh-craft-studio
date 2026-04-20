@@ -42,13 +42,13 @@
   }
 
   html.dark {
-    --color-page-bg: #081226;
+    --color-page-bg: #02060f;
     --color-surface: rgba(255, 255, 255, 0.01);
     --color-surface-strong: rgba(255, 255, 255, 0.02);
     --color-elevated-surface: rgba(8, 18, 38, 0.6);
     --color-media-overlay: rgba(8, 18, 38, 0.58);
     --color-media-foreground: #ffffff;
-    --color-header-block: #081226;
+    --color-header-block: #02060f;
     --color-foreground: #ffffff;
     --color-foreground-rgb: 255 255 255;
     --color-foreground-muted: #a3a3a3;

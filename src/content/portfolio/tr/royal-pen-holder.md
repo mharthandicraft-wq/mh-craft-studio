@@ -1,26 +1,37 @@
 ---
-locale: "tr"
+locale: "en"
 translationKey: "royal-pen-holder"
-title: "Kraliyet Kalemlik"
-description: "Hatem sanatının görsel disiplinini günlük bir nesneye taşıyan, el yapımı ve kompakt bir masa parçası."
-mainImage: "/images/portfolio/Pen-Holder/handmade-khatam-pen-holder.webp"
-mainImageAlt: "Geometrik kakma detaylarına sahip el yapımı hatem kalemlik"
+title: "Royal Pen Holder"
+description: "A compact handcrafted desk piece that carries the visual discipline of Khatam into an everyday object."
+mainImage: "/images/portfolio/Pen Holder/handmade-khatam-pen-holder.webp"
+mainImageAlt: "Handmade Khatam pen holder with geometric marquetry details"
 gallery:
-  - src: "/images/portfolio/Pen-Holder/royal-pen-holder-detail.webp"
-    alt: "Kalemliğin katmanlı geometrik kakmasını gösteren yakın plan"
-time: "100 Saat"
-category: "Lüks Kalemlikler"
+  - src: "/images/portfolio/Pen Holder/DSCF6534.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6537.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6536.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6553.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6527.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  - src: "/images/portfolio/Pen Holder/DSCF6552.webp"
+    alt: "Close-up of the pen holder showing the layered geometric inlay"
+  
+time: "100 Hours"
+category: "Luxury Pen Holders"
 sku: "MH-PH-001"
 availability: "made-to-order"
 materials:
-  - "ahşap"
-  - "pirinç"
-  - "kemik"
+  - "wood"
+  - "brass"
+  - "bone"
 tags:
-  - "kalemlik"
-  - "masa objesi"
-  - "hatem"
+  - "pen holder"
+  - "desk object"
+  - "khatam"
 ---
-Bu kalemlik, geleneksel hatem tasarımını daha küçük ve işlevsel bir forma taşır. Günlük kullanım için tasarlanmıştır; buna rağmen klasik atölye işlerinde görülen hassasiyet, ritim ve görsel yoğunluğu korur.
+This pen holder brings traditional Khatam design into a smaller, practical form. It is designed for daily use while still carrying the precision, rhythm, and visual density associated with classical workshop pieces.
 
-Daha büyük işlerde olduğu gibi bu nesnenin değeri yalnızca son görünümünde değil, onu tamamlamak için gereken disiplinli el işçiliğinde de yatar.
+As with the larger works, the value of the object lies not only in the final appearance, but also in the disciplined handwork required to complete it.

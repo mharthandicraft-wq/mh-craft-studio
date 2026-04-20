@@ -2,10 +2,7 @@
   "locale": "tr",
   "pageId": "home",
   "hero": {
-    "image": {
-      "src": "/images/home/artisan-marquetry-jewelry-box.webp",
-      "alt": "Ayrıntılı hatem işçiliğini gösteren el yapımı hatem mücevher kutusu"
-    },
+   "videoId": "Bw5FJWDB9_0",
     "headline": "Üreten Eller.",
     "highlight": "Yaşayan Bir Zanaat.",
     "summary": "Türkiye’de mültecilere eğitim vermek ve Hatem sanatını korumak amacıyla geleneksel bir el sanatları atölyesini yeniden kuruyoruz.",
