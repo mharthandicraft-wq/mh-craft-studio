@@ -2,10 +2,11 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface HeroContent {
-  image: {
+  image?: {
     src: string;
     alt: string;
   };
+  videoId?: string;
   headline: string;
   highlight: string;
   summary: string;
@@ -33,12 +34,27 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
       <section className="w-full bg-theme-base transition-colors duration-500 lg:hidden">
         <div className="flex min-h-screen flex-col">
           <div className="relative h-[42vh] w-full sm:h-[48vh]">
-            <img
-              src={content.image.src}
-              alt={content.image.alt}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--color-page-bg)_10%,transparent)]" />
+            {content.image ? (
+              <>
+                <img
+                  src={content.image.src}
+                  alt={content.image.alt}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--color-page-bg)_10%,transparent)]" />
+              </>
+            ) : content.videoId ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${content.videoId}?autoplay=1&start=40`}
+                title="Hero Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            ) : null}
           </div>
 
           <div className="flex flex-1 items-center justify-center bg-theme-base px-6 py-12 text-center transition-colors duration-500 sm:px-10 sm:py-16">
@@ -73,12 +89,27 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
             style={{ width: imageWidth }}
             className="relative h-full shrink-0"
           >
-            <img
-              src={content.image.src}
-              alt={content.image.alt}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--color-page-bg)_10%,transparent)]" />
+            {content.image ? (
+              <>
+                <img
+                  src={content.image.src}
+                  alt={content.image.alt}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-[color:color-mix(in_srgb,var(--color-page-bg)_10%,transparent)]" />
+              </>
+            ) : content.videoId ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${content.videoId}?autoplay=1&start=40`}
+                title="Hero Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            ) : null}
           </motion.div>
 
           <div className="relative flex h-full flex-1 items-center bg-theme-base transition-colors duration-500">

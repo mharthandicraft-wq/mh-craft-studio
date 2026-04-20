@@ -13,7 +13,8 @@ const localizedPageBaseSchema = z.object({
 const homePageSchema = localizedPageBaseSchema.extend({
   pageId: z.literal('home'),
   hero: z.object({
-    image: imageSchema,
+    image: imageSchema.optional(),
+    videoId: z.string().optional(),
     headline: z.string(),
     highlight: z.string(),
     summary: z.string(),

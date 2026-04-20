@@ -2,10 +2,7 @@
   "locale": "en",
   "pageId": "home",
   "hero": {
-    "image": {
-      "src": "/images/home/artisan-marquetry-jewelry-box.webp",
-      "alt": "Handcrafted Khatam jewelry box showing detailed marquetry work"
-    },
+    "videoId": "Bw5FJWDB9_0",
     "headline": "Hands That Create.",
     "highlight": "A Craft That Survives.",
     "summary": "We are rebuilding a traditional craft workshop in Turkey to train refugees and preserve Khatam art.",
