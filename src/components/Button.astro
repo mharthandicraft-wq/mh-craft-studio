@@ -1,0 +1,34 @@
+---
+// Reusable Button Component
+interface Props {
+  href: string;
+  label: string;
+  variant?: 'primary' | 'secondary' | 'outline';
+  target?: string;
+  rel?: string;
+}
+
+const { 
+  href, 
+  label, 
+  variant = 'secondary',
+  target,
+  rel
+} = Astro.props;
+
+// Define button styles based on variant
+const variantStyles = {
+  primary: "bg-brand-gold text-theme-contrast hover:brightness-105",
+  secondary: "border border-theme text-theme hover:border-brand-gold/70 hover:text-brand-gold",
+  outline: "border-b-1 border-brand-gold text-brand-gold pb-2 hover:border-b-2 text-theme transition-colors"
+};
+---
+
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  class={`inline-flex w-full items-center justify-center px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-center transition-all duration-300 rounded-sm ${variantStyles[variant]}`}
+>
+  {label}
+</a>

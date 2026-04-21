@@ -9,6 +9,8 @@ export function getStaticPaths() {
 
 const activeLang = normalizeLang(Astro.params.lang);
 const content = await getOrganizationSupporterPageContent(activeLang);
+const proposalOpensInNewTab = /^https?:\/\//.test(content.proposalCtaHref);
+const finalPrimaryOpensInNewTab = /^https?:\/\//.test(content.finalCta.primaryHref);
 ---
 
 <MainLayout title={content.meta.title} description={content.meta.description} lang={activeLang}>
@@ -90,6 +92,8 @@ const content = await getOrganizationSupporterPageContent(activeLang);
 
           <a
             href={content.proposalCtaHref}
+            target={proposalOpensInNewTab ? '_blank' : undefined}
+            rel={proposalOpensInNewTab ? 'noopener noreferrer' : undefined}
             class="mt-8 w-full px-8 py-4 bg-brand-gold text-theme-contrast font-sans font-bold uppercase tracking-widest text-sm text-center hover:brightness-105 transition-all duration-300 rounded-sm"
           >
             {content.proposalCtaLabel}
@@ -307,6 +311,8 @@ const content = await getOrganizationSupporterPageContent(activeLang);
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
           href={content.finalCta.primaryHref}
+          target={finalPrimaryOpensInNewTab ? '_blank' : undefined}
+          rel={finalPrimaryOpensInNewTab ? 'noopener noreferrer' : undefined}
           class="w-full sm:w-auto px-10 py-5 bg-brand-gold text-theme-contrast font-sans font-bold uppercase tracking-widest text-sm hover:brightness-105 transition-colors duration-300 rounded-sm"
         >
           {content.finalCta.primaryLabel}

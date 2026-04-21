@@ -9,7 +9,7 @@
     "title": "Join Us In Building This Small Workshop",
     "subtitle": "I can begin creating, teaching, and sharing traditional craftsmanship with just a small space and a few basic tools.",
     "emotionalLine": "This is not a finished workshop yet — it’s the beginning of one.",
-    "ctaLabel": "See How This Starts"
+    "ctaLabel": "Be Part of the Start"
   },
   "whatSupportsCreates": {
     "title": "What your support helps create",
@@ -64,17 +64,20 @@
       {
         "title": "Buy a Coffee",
         "subtitle": "Support daily progress and energy",
-        "buttonLabel": "Buy Me a Coffee"
+        "buttonLabel": "Buy Me a Coffee",
+        "href": "https://www.buymeacoffee.com/mharthandiv"
       },
       {
         "title": "Help find a space",
         "subtitle": "If you know a small room or workspace",
-        "buttonLabel": "Contact Me"
+        "buttonLabel": "Contact Me",
+        "href": "mailto:mh.art.handicraft@gmail.com"
       },
       {
         "title": "Be part of the beginning",
         "subtitle": "Even a small support helps this project start",
-        "buttonLabel": "Support This Start"
+        "buttonLabel": "Support This Start",
+        "href": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft"
       }
     ]
   }

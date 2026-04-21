@@ -64,17 +64,20 @@
       {
         "title": "Bir kahve ısmarla",
         "subtitle": "Günlük ilerleme ve motivasyon için",
-        "buttonLabel": "Bana Bir Kahve Ismarla"
+        "buttonLabel": "Bana Bir Kahve Ismarla",
+        "href": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft"
       },
       {
         "title": "Alan bulmaya yardım et",
         "subtitle": "Eğer küçük bir oda ya da çalışma alanı biliyorsanız",
-        "buttonLabel": "Benimle İletişime Geç"
+        "buttonLabel": "Benimle İletişime Geç",
+        "href": "mailto:mh.art.handicraft@gmail.com"
       },
       {
         "title": "Bu başlangıcın parçası ol",
         "subtitle": "Küçük destekler bile bu projeyi mümkün kılar",
-        "buttonLabel": "Bu Başlangıcı Destekle"
+        "buttonLabel": "Bu Başlangıcı Destekle",
+        "href": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft"
       }
     ]
   }

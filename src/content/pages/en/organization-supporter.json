@@ -27,10 +27,10 @@
       ]
     }
   ],
-  "proposalCtaLabel": "Download Full Proposal (PDF)",
-  "proposalCtaHref": "mailto:mhcraftstudio@gmail.com?subject=Request%20for%20Full%20Proposal%20PDF",
+  "proposalCtaLabel": "Support the Project",
+  "proposalCtaHref": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft" ,
   "partnerCtaLabel": "Contact for Partnership",
-  "partnerCtaHref": "mailto:mhcraftstudio@gmail.com?subject=Partnership%20Inquiry",
+  "partnerCtaHref": "mailto:mh.art.handicraft@gmail.com?subject=Partnership%20Inquiry",
   "projectOverview": {
     "eyebrow": "Project Overview",
     "title": "What this project is",
@@ -73,9 +73,9 @@
   },
   "finalCta": {
     "text": "We are not requesting funding for a concept - we are asking for support to begin a real working space.",
-    "primaryLabel": "Start Collaboration",
-    "primaryHref": "mailto:mhcraftstudio@gmail.com?subject=Start%20Collaboration",
-    "secondaryLabel": "Request Meeting",
-    "secondaryHref": "mailto:mhcraftstudio@gmail.com?subject=Request%20Meeting"
+    "primaryLabel": "Support a new beginning",
+    "primaryHref": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft",
+    "secondaryLabel": "Contact  Us",
+    "secondaryHref": "mailto:mh.art.handicraft@gmail.com?subject=Request%20Meeting"
   }
 }

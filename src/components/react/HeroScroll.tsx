@@ -21,13 +21,13 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
     offset: ["start start", "end end"]
   });
 
-  const imageWidth = useTransform(scrollYProgress, [0, 0.3], ["100%", "60%"]);
+  const imageWidth = useTransform(scrollYProgress, [0, 0.28], ["100%", "60%"]);
   
-  const text1Opacity = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.5], [0, 1, 1, 0]);
-  const text1Y = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.5], [30, 0, 0, -30]);
+  const text1Opacity = useTransform(scrollYProgress, [0, 0.12, 0.3, 0.42], [0, 1, 1, 0]);
+  const text1Y = useTransform(scrollYProgress, [0, 0.12, 0.3, 0.42], [30, 0, 0, -30]);
 
-  const text2Opacity = useTransform(scrollYProgress, [0.4, 0.55, 0.9], [0, 1, 1]);
-  const text2Y = useTransform(scrollYProgress, [0.4, 0.55], [30, 0]);
+  const text2Opacity = useTransform(scrollYProgress, [0.34, 0.48, 0.86, 0.94], [0, 1, 1, 0]);
+  const text2Y = useTransform(scrollYProgress, [0.34, 0.48, 0.94], [30, 0, -18]);
 
   return (
     <>
@@ -83,8 +83,8 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
         </div>
       </section>
 
-      <section ref={targetRef} className="relative hidden h-[300vh] w-full bg-theme-base transition-colors duration-500 lg:block">
-        <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden">
+      <section ref={targetRef} className="relative z-10 hidden h-[360vh] w-full bg-theme-base transition-colors duration-500 lg:block">
+        <div className="sticky top-0 z-20 flex h-screen w-full items-center overflow-hidden bg-theme-base">
           <motion.div
             style={{ width: imageWidth }}
             className="relative h-full shrink-0"
@@ -115,7 +115,7 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
           <div className="relative flex h-full flex-1 items-center bg-theme-base transition-colors duration-500">
             <motion.div
               style={{ opacity: text1Opacity, y: text1Y }}
-              className="absolute inset-0 flex flex-col justify-center px-6 md:px-16"
+              className="absolute inset-0 z-10 flex flex-col justify-center px-6 md:px-16"
             >
               <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-theme transition-colors duration-500 md:text-5xl lg:text-6xl">
                 {content.headline}<br/>
@@ -128,7 +128,7 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
 
             <motion.div
               style={{ opacity: text2Opacity, y: text2Y }}
-              className="absolute inset-0 flex flex-col justify-center px-6 md:px-16"
+              className="absolute inset-0 z-10 flex flex-col justify-center px-6 md:px-16"
             >
               <div className="max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 md:text-xl">
                 <p className="mb-6">

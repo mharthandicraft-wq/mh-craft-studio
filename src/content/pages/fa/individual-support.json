@@ -64,17 +64,20 @@
       {
         "title": "خرید یک قهوه",
         "subtitle": "برای حمایت از انرژی و پیشرفت روزانه",
-        "buttonLabel": "برای من یک قهوه بخر"
+        "buttonLabel": "برای من یک قهوه بخر",
+        "href": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft"
       },
       {
         "title": "کمک برای پیدا کردن فضا",
         "subtitle": "اگر یک اتاق کوچک یا فضای کار می شناسید",
-        "buttonLabel": "تماس با من"
+        "buttonLabel": "تماس با من",
+        "href": "mailto:mh.art.handicraft@gmail.com"
       },
       {
         "title": "همراه شدن با شروع",
         "subtitle": "حتی حمایت های کوچک هم این مسیر را ممکن می کند",
-        "buttonLabel": "حمایت از این شروع"
+        "buttonLabel": "حمایت از این شروع",
+        "href": "https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft"
       }
     ]
   }

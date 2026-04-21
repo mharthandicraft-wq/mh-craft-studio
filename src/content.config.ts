@@ -182,6 +182,7 @@ const individualSupportPageSchema = localizedPageBaseSchema.extend({
       title: z.string(),
       subtitle: z.string(),
       buttonLabel: z.string(),
+      href: z.string(),
     })).length(3),
   }),
 });

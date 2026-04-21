@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import { getIndividualSupportPageContent } from '../../lib/content';
 import { SUPPORTED_LANGS, normalizeLang } from '../../lib/i18n';
+import Button from '../../components/Button.astro';
 
 export function getStaticPaths() {
   return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
@@ -49,14 +50,11 @@ const content = await getIndividualSupportPageContent(activeLang);
           </p>
 
           <div class="mt-10">
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              class="inline-flex w-full items-center justify-center rounded-sm bg-brand-gold px-6 py-4 text-center font-sans text-sm font-semibold uppercase tracking-[0.16em] text-[#111111] opacity-80 transition sm:w-auto"
-            >
-              {content.hero.ctaLabel}
-            </button>
+           <Button
+           href="https://whydonate.com/fundraising/reviving-khatam-art-empowering-refugees-through-craft"
+           variant="primary"
+           label="Be part of start"
+           />
           </div>
         </div>
       </div>
@@ -169,14 +167,7 @@ const content = await getIndividualSupportPageContent(activeLang);
                 {item.subtitle}
               </p>
 
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                class="mt-7 inline-flex w-full items-center justify-center rounded-sm border border-brand-gold/50 bg-transparent px-5 py-3 text-center font-sans text-xs font-semibold uppercase tracking-[0.14em] text-theme transition duration-300 group-hover:border-brand-gold group-hover:bg-brand-gold group-hover:text-[#111111]"
-              >
-                {item.buttonLabel}
-              </button>
+             
             </article>
           ))}
         </div>
@@ -223,28 +214,33 @@ const content = await getIndividualSupportPageContent(activeLang);
       </h2>
 
       <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
-        {content.howYouCanHelp.items.map((item) => (
-          <article class="group relative overflow-hidden rounded-sm border border-theme bg-theme-base p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/35 hover:bg-theme-surface sm:p-7">
-            <span class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+        {content.howYouCanHelp.items.map((item) => {
+          const opensInNewTab = /^https?:\/\//.test(item.href);
 
-            <h3 class="text-balance font-serif text-2xl leading-tight text-brand-gold">
-              {item.title}
-            </h3>
+          return (
+            <article class="group relative overflow-hidden rounded-sm border border-theme bg-theme-base p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/35 hover:bg-theme-surface sm:p-7">
+              <span class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></span>
 
-            <p class="mt-4 min-h-[3.5rem] text-start font-sans text-base leading-relaxed text-theme-soft">
-              {item.subtitle}
-            </p>
+              <h3 class="text-balance font-serif text-2xl leading-tight text-brand-gold">
+                {item.title}
+              </h3>
 
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              class="mt-7 inline-flex w-full items-center justify-center rounded-sm border border-brand-gold/50 bg-transparent px-5 py-3 text-center font-sans text-xs font-semibold uppercase tracking-[0.14em] text-theme transition duration-300 group-hover:border-brand-gold group-hover:bg-brand-gold group-hover:text-[#111111]"
-            >
-              {item.buttonLabel}
-            </button>
-          </article>
-        ))}
+              <p class="mt-4 min-h-[3.5rem] text-start font-sans text-base leading-relaxed text-theme-soft">
+                {item.subtitle}
+              </p>
+
+              <div class="mt-7">
+                <Button
+                  href={item.href}
+                  label={item.buttonLabel}
+                  variant="primary"
+                  target={opensInNewTab ? '_blank' : undefined}
+                  rel={opensInNewTab ? 'noopener noreferrer' : undefined}
+                />
+              </div>
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>
