@@ -2,13 +2,13 @@
 
 /* Import Fontsource Fonts */
 @import "@fontsource-variable/inter";
-@import "@fontsource/amarante/400.css";
+@import "@fontsource/dm-serif-display/400.css";
 @import "@fontsource/vazirmatn";
 
 @theme {
   /* Define custom font families */
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Amarante", serif;
+  --font-serif: "DM Serif Display", serif;
   --font-farsi: "Vazirmatn", sans-serif;
 
   /* Custom Colors for the brand */
