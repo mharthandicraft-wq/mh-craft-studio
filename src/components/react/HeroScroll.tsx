@@ -47,7 +47,7 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
               <iframe
                 width="100%"
                 height="100%"
-                src={`https://www.youtube.com/embed/${content.videoId}?autoplay=1&start=40`}
+                src={`https://www.youtube.com/embed/${content.videoId}?autoplay=1&mute=1&start=40`}
                 title="Hero Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -61,7 +61,7 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
             <div className="mx-auto flex max-w-3xl flex-col items-center">
               <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-theme transition-colors duration-500 sm:text-5xl">
                 {content.headline}<br />
-                <span className="text-brand-gold italic">{content.highlight}</span>
+                <span className="text-brand-gold ">{content.highlight}</span>
               </h1>
               <p className="max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 sm:text-xl">
                 {content.summary}
@@ -102,7 +102,7 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
               <iframe
                 width="100%"
                 height="100%"
-                src={`https://www.youtube.com/embed/${content.videoId}?autoplay=1&start=40`}
+                src={`https://www.youtube.com/embed/${content.videoId}?autoplay=1&mute=1&start=40`}
                 title="Hero Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -119,7 +119,7 @@ const HeroScroll = ({ content }: { content: HeroContent }) => {
             >
               <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-theme transition-colors duration-500 md:text-5xl lg:text-6xl">
                 {content.headline}<br/>
-                <span className="text-brand-gold italic">{content.highlight}</span>
+                <span className="text-brand-gold ">{content.highlight}</span>
               </h1>
               <p className="max-w-2xl font-sans text-lg leading-relaxed text-theme-muted transition-colors duration-500 md:text-xl">
                 {content.summary}
