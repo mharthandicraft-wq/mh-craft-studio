@@ -82,7 +82,7 @@ const StatusAndChallenges = ({ content }: { content: StatusContent }) => {
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-theme leading-tight mb-8">
               {content.reality.title}   <br />
-              <span className="text-brand-gold italic opacity-80 font-light">{content.reality.accent}</span>
+              <span className="text-brand-gold  opacity-80 font-light">{content.reality.accent}</span>
             </h2>
             <p className="font-sans text-theme-muted text-lg leading-relaxed max-w-md mx-auto lg:mx-0">
               {content.reality.description}
@@ -156,7 +156,7 @@ const StatusAndChallenges = ({ content }: { content: StatusContent }) => {
               {content.currentSituation.eyebrow}
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-theme mb-6 leading-tight">
-              {content.currentSituation.title} <br /> <span className="italic opacity-70 font-light text-brand-gold">{content.currentSituation.accent}</span>
+              {content.currentSituation.title} <br /> <span className=" opacity-70 font-light text-brand-gold">{content.currentSituation.accent}</span>
             </h2>
             <p className="font-sans text-theme-muted text-lg leading-relaxed max-w-md mx-auto lg:ml-auto">
               {content.currentSituation.description}
